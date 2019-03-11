@@ -1,4 +1,4 @@
-# landingpage
+# Gun Violence Heat Maps | Landing Page
 
 **Live Site:** `TBD`
 
