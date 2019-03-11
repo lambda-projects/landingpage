@@ -174,3 +174,6 @@ p {
 p.tagline {
   font-size: 2rem;
 }
+button {
+  cursor: pointer;
+}
