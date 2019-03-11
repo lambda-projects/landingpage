@@ -29,9 +29,7 @@ Color Variables   | Hex Values |
 @gvhm-lightbluish | #9FA9B2    |
 @gvhm-lightgrey   | #D3D7C8    |
 
-Better names will come on later commits.
-
-[Visualization of color scheme](https://coolors.co/a51212-666666-4f5a62-9fa9b2-d3d7c8).
+[Visualization of color scheme](https://coolors.co/a51212-666666-4f5a62-9fa9b2-d3d7c8) on coolors.com.
 
 Color scheme inspired by [this palette](https://www.colourlovers.com/palette/453310/Sound_Of_A_Gun).
 
