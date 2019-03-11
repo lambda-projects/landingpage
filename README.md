@@ -21,13 +21,13 @@ Context          | Google Font          | Fallback
 H1-H6            | [Playfair Display SC](https://fonts.google.com/specimen/Playfair+Display+SC) | serif
 Body text        | [Open Sans](https://fonts.google.com/specimen/Open+Sans) | sans-serif
 
-Color Variables | Hex Values |
----             |---         |
-@Color1         | #A51212    |
-@Color2         | #666666    |
-@Color3         | #4F5A62    |
-@Color4         | #9FA9B2    |
-@Color5         | #D3D7C8    |
+Color Variables   | Hex Values |
+---               |---         |
+@gvhm-red         | #A51212    |
+@gvhm-darkgrey    | #666666    |
+@gvhm-darkbluish  | #4F5A62    |
+@gvhm-lightbluish | #9FA9B2    |
+@gvhm-lightgrey   | #D3D7C8    |
 
 Better names will come on later commits.
 
