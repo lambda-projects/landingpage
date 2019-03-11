@@ -35,7 +35,7 @@ Color scheme inspired by [this palette](https://www.colourlovers.com/palette/453
 
 ## Most Recent Style Guide
 
-![Style Guide v01](../design-files/StyleGuide-v01.png)
+![Style Guide v01](/design-files/StyleGuide-v01.png)
 
 ## File Structure & Organization
 
