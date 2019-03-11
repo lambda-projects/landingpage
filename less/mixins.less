@@ -1,0 +1,12 @@
+.center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex(@dir: row, @jc: none, @ai: none) {
+  display: flex;
+  flex-direction: @dir;
+  justify-content: @jc;
+  align-items: @ai;
+}
