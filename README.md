@@ -33,5 +33,9 @@ Color Variables   | Hex Values |
 
 Color scheme inspired by [this palette](https://www.colourlovers.com/palette/453310/Sound_Of_A_Gun).
 
+## Most Recent Style Guide
+
+![Style Guide v01](../design-files/StyleGuide-v01.png)
+
 ## File Structure & Organization
 
