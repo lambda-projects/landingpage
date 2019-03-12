@@ -318,20 +318,38 @@ button.cta:hover {
   flex-direction: row;
   justify-content: flex-start;
   align-items: stretch;
-  flex-wrap: wrap;
+}
+@media (max-width: 800px) {
+  .section-wrap .spotlight {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
 }
 .section-wrap .spotlight.rev {
-  flex-wrap: wrap-reverse;
+  flex-direction: row-reverse;
 }
-.section-wrap .spotlight.rev .img-wrap {
-  order: 1;
+@media (max-width: 800px) {
+  .section-wrap .spotlight.rev {
+    flex-direction: column;
+  }
 }
 .section-wrap .spotlight.bg-1,
 .section-wrap .spotlight.bg-2 {
   padding: 0;
 }
 .section-wrap .spotlight .img-wrap {
+  width: 40vw;
+}
+@media (max-width: 800px) {
+  .section-wrap .spotlight .img-wrap {
+    width: 100%;
+  }
+}
+.section-wrap .spotlight .img-wrap img {
   height: 100%;
+  object-fit: cover;
 }
 .section-wrap .spotlight .spot-content {
   max-width: 800px;

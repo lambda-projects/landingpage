@@ -131,7 +131,7 @@ i {
   }
 }
 
-// Span Preferred Line Break
+// Special Purpose Spans
 span.break {
   display: inline-block;
 }
@@ -195,12 +195,16 @@ button {
   // &.spotlights {}
   .spotlight {
     .flex;
-    flex-wrap: wrap;
+
+    @media @tablet {
+      .flex(column);
+    }
 
     &.rev {
-      flex-wrap: wrap-reverse;
-      .img-wrap {
-        order: 1;
+      flex-direction: row-reverse;
+
+      @media @tablet {
+        flex-direction: column;
       }
     }
 
@@ -209,16 +213,21 @@ button {
     }
 
     .img-wrap {
-      // width: 24%;
-      height: 100%;
-      // flex: 0 1 auto;
+      width: 40vw;
+
+      @media @tablet {
+        width: 100%;
+      }
+
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
     }
     
     .spot-content {
       .max-w;
-      // width: 75%;
       padding: 2rem 0;
-      // flex: 0 2 auto;
     }
   }
 
@@ -230,6 +239,6 @@ button {
     // text-align: start;
   }
   .grid-cell {
-    
+
   }
 }
