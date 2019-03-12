@@ -198,6 +198,26 @@ button.cta {
 button.cta:hover {
   background: #AD2727;
 }
+.bg-1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: #4F5A62;
+  color: white;
+  padding: 3rem 0;
+}
+.bg-2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: #666666;
+  color: white;
+  padding: 3rem 0;
+}
 .section-wrap {
   display: flex;
   justify-content: center;
@@ -212,6 +232,9 @@ button.cta:hover {
 }
 .section-wrap .banner {
   text-align: center;
+}
+.section-wrap .grid-wrap {
+  max-width: 1000px;
 }
 .nav-site {
   width: 100%;

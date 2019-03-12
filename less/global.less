@@ -84,6 +84,23 @@ button {
 }
 
 // Content Sections
+.bg {
+  &-1 {
+    width: 100%;
+    .center;
+    background-color: @content1-bg;
+    color: @content1-color;
+    padding: 3rem 0;
+  }
+  &-2 {
+    width: 100%;
+    .center;
+    background-color: @content2-bg;
+    color: @content2-color;
+    padding: 3rem 0;
+  }
+}
+
 .section-wrap {
   .center(column);
 
@@ -102,4 +119,8 @@ button {
   // .spot-content {
   //   .max-w;
   // }
+
+  .grid-wrap {
+    max-width: 1000px;
+  }
 }
