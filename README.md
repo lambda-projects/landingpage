@@ -20,6 +20,7 @@ Context          | Google Font          | Fallback
 ---              |---                   |---
 H1-H6            | [Playfair Display SC](https://fonts.google.com/specimen/Playfair+Display+SC) | serif
 Body text        | [Open Sans](https://fonts.google.com/specimen/Open+Sans) | sans-serif
+Icons            | [Font Awesome (Free)](https://fontawesome.com/) | `none`
 
 Color Variables   | Hex Values |
 ---               |---         |
