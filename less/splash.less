@@ -1,0 +1,42 @@
+.splash {
+  min-height: 100vh;
+  .flex(column, space-between, center);
+
+  .header-section {
+    .center;
+    flex: 1 1 auto;
+    min-height: 100%;
+    .max-w;
+  
+    .header-content {
+      padding: 2rem;
+      color: @header-color;
+      // background-color: @header-bg;
+      border-radius: 1rem;
+      text-align: center;
+    }
+
+    a {
+      color: @header-a;
+    }
+  }
+
+  .nav-page {
+    .flex(row, space-evenly, center);
+    flex-wrap: wrap;
+    flex: 0 1 auto;
+    align-self: stretch;
+
+    @media @mobile {
+      display: none;
+    }
+  
+    .jump {
+      color: @jump-color;
+      text-decoration: none;
+      padding: 0 3rem;
+      margin: 3rem 0;
+      .center(column);
+    }
+  }
+}

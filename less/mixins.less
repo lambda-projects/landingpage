@@ -1,0 +1,18 @@
+.max-w() {
+  max-width: @max-w;
+  margin: 0 2rem;
+}
+
+.center(@dir: row) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: @dir;
+}
+
+.flex(@dir: row, @jc: flex-start, @ai: stretch) {
+  display: flex;
+  flex-direction: @dir;
+  justify-content: @jc;
+  align-items: @ai;
+}

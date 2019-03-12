@@ -1,0 +1,106 @@
+// Content Row Styles
+.bg {
+  &-1 {
+    width: 100%;
+    .center;
+    background-color: @content1-bg;
+    color: @content1-color;
+    padding: 3rem 0;
+
+    a {
+      color: @content1-a;
+    }
+
+    .grid-cell {
+      background-color: @content2-bg;
+      color: @content2-color;
+    }
+  }
+  &-2 {
+    width: 100%;
+    .center;
+    background-color: @content2-bg;
+    color: @content2-color;
+    padding: 3rem 0;
+
+    a {
+      color: @content2-a;
+    }
+
+    .grid-cell {
+      background-color: @content1-bg;
+      color: @content1-color;
+    }
+  }
+}
+
+// Content Sections
+.section-wrap {
+  .center(column);
+
+  // Banners
+  &.banners {
+    text-align: center;
+  }
+  .banner-wrap {
+    .max-w;
+  }
+  .banner {
+    text-align: center;
+  }
+
+  // Spotlights
+  // &.spotlights {}
+  .spotlight {
+    .flex;
+
+    @media @tablet {
+      .flex(column);
+    }
+
+    &.rev {
+      flex-direction: row-reverse;
+
+      @media @tablet {
+        flex-direction: column;
+      }
+    }
+
+    &.bg-1, &.bg-2 {
+      padding: 0;
+    }
+
+    .img-wrap {
+      width: 40vw;
+
+      @media @tablet {
+        width: 100%;
+      }
+
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    
+    .spot-content {
+      .max-w;
+      padding: 2rem 0;
+    }
+  }
+
+  // Grids
+  &.grid {
+    text-align: center;
+  }
+  .grid-wrap {
+    // Using both row-reverse and wrap-reverse so that a top feature can be easily highlighted by itself, but requires grid-cells to be ordered backwards in HTML
+    .flex(row-reverse, space-between, center);
+    flex-wrap: wrap-reverse;
+  }
+  .grid-cell {
+    margin: 2rem;
+    padding: 2rem;
+    flex: 1 1 40rem;
+  }
+}

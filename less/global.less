@@ -1,0 +1,154 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.test {
+  border: 1px solid red;
+  // outline: red solid 1px;
+
+  &2 {
+    border: 1px solid blue;
+  }
+
+  &3 {
+    border: 1px solid green;
+  }
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: @font-body;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  // Fixed bg
+  background-image: url('../img/earth-light.jpg');
+  background-size: cover;
+  background-position: 50%;
+  background-attachment: fixed;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+// H1-H6 Styling
+h1, h2, h3, h4, h5, h6 {
+  font-family: @font-header;
+  margin-bottom: 2.4rem;
+}
+
+h1 {
+  font-size: 7.2rem;
+  color: @h1-color;
+
+  @media @tablet {
+    font-size: 6.6rem;
+  }
+
+  @media @mobile {
+    font-size: 4.8rem;
+  }
+}
+
+h2 {
+  font-size: 6rem;
+
+  @media @tablet {
+    font-size: 5.4rem;
+  }
+
+  @media @mobile {
+    font-size: 4.8rem;
+  }
+}
+
+h3 {
+  font-size: 4.8rem;
+
+  @media @tablet {
+    font-size: 4.2;
+  }
+
+  @media @mobile {
+    font-size: 3.6rem;
+  }
+}
+
+h4 {
+  font-size: 3.6rem;
+
+  @media @tablet {
+    font-size: 3rem;
+  }
+
+  @media @mobile {
+    font-size: 2.4;
+  }
+}
+
+h5 {
+  font-size: 2.4rem;
+
+  @media @tablet {
+    font-size: 2rem;
+  }
+
+  @media @mobile {
+    font-size: 1.6rem;
+  }
+}
+
+// Paragraph Styling
+p {
+  margin-bottom: 2.4rem;
+  line-height: 1.25;
+
+  &:p1, &.tagline, &.dev-role {
+    font-size: 2rem;
+  }
+}
+
+// Icon Styling
+i {
+  padding-right: 0.5em;
+
+  &.block-top, &.block-bot {
+    padding-right: 0;
+  }
+
+  &.block-top {
+    padding-bottom: 0.5em;
+  }
+
+  &.block-bot {
+    padding-top: 0.5em;
+  }
+}
+
+// Special Purpose Spans
+span.break {
+  display: inline-block;
+}
+
+// Button Styling
+button {
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border: 0;
+  border-radius: 0.5rem;
+
+  &.cta {
+    background: @cta-bg;
+    color: white;
+
+    &:hover {
+      background:@cta-hov;
+    }
+  }
+}
