@@ -182,6 +182,9 @@ p:p1,
 p.tagline {
   font-size: 2rem;
 }
+span.break {
+  display: inline-block;
+}
 button {
   cursor: pointer;
   padding: 1rem 2rem;
@@ -191,6 +194,21 @@ button {
 button.cta {
   background: #A51212;
   color: white;
+}
+.section-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.section-wrap.banners {
+  text-align: center;
+}
+.section-wrap .banner-wrap {
+  max-width: 800px;
+}
+.section-wrap .banner {
+  text-align: center;
 }
 .nav-site {
   width: 100%;
@@ -213,15 +231,17 @@ button.cta {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: stretch;
+  align-items: center;
 }
 .splash .header-section {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   flex: 1 1 auto;
   margin: 0 2rem;
   min-height: 100%;
+  max-width: 800px;
 }
 .splash .header-section .header-content {
   padding: 2rem;
@@ -235,6 +255,7 @@ button.cta {
   align-items: center;
   flex-wrap: wrap;
   flex: 0 1 auto;
+  align-self: stretch;
 }
 .splash .nav-page .jump {
   color: black;

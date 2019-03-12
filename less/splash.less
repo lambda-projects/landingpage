@@ -1,12 +1,13 @@
 .splash {
   min-height: 100vh;
-  .flex(column, space-between);
+  .flex(column, space-between, center);
 
   .header-section {
     .center;
     flex: 1 1 auto;
     margin: 0 2rem;
     min-height: 100%;
+    .max-w;
   
     .header-content {
       padding: 2rem;
@@ -19,6 +20,7 @@
     .flex(row, space-evenly, center);
     flex-wrap: wrap;
     flex: 0 1 auto;
+    align-self: stretch;
   
     .jump {
       color: black;

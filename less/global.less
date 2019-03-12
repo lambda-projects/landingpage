@@ -61,6 +61,11 @@ p {
   }
 }
 
+// Span Preferred Line Break
+span.break {
+  display: inline-block;
+}
+
 // Button Styling
 button {
   cursor: pointer;
@@ -74,7 +79,19 @@ button {
   }
 }
 
-// Main
-main {
-  
+// Content Sections
+.section-wrap {
+  .center(column);
+
+  &.banners {
+    text-align: center;
+  }
+
+  .banner-wrap {
+    .max-w;
+  }
+
+  .banner {
+    text-align: center;
+  }
 }

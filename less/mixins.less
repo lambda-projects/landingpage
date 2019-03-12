@@ -1,7 +1,12 @@
-.center() {
+.max-w() {
+  max-width: @max-w;
+}
+
+.center(@dir: row) {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: @dir;
 }
 
 .flex(@dir: row, @jc: flex-start, @ai: stretch) {
