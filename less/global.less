@@ -2,6 +2,19 @@
   box-sizing: border-box;
 }
 
+.test {
+  border: 1px solid red;
+  // outline: red solid 1px;
+
+  &2 {
+    border: 1px solid blue;
+  }
+
+  &3 {
+    border: 1px solid green;
+  }
+}
+
 html {
   font-size: 62.5%;
 }
@@ -39,7 +52,7 @@ h1 {
   }
 
   @media @mobile {
-    font-size: 5.7rem;
+    font-size: 4.8rem;
   }
 }
 
@@ -179,7 +192,7 @@ button {
     text-align: center;
   }
 
-  // &:.spotlights {}
+  // &.spotlights {}
   .spotlight {
     .flex;
     flex-wrap: wrap;
@@ -196,12 +209,17 @@ button {
     }
 
     .img-wrap {
+      // width: 24%;
       height: 100%;
+      // flex: 0 1 auto;
     }
-  }
-  .spot-content {
-    .max-w;
-    padding: 2rem 0;
+    
+    .spot-content {
+      .max-w;
+      // width: 75%;
+      padding: 2rem 0;
+      // flex: 0 2 auto;
+    }
   }
 
   .grid-wrap {

@@ -26,6 +26,10 @@
     flex-wrap: wrap;
     flex: 0 1 auto;
     align-self: stretch;
+
+    @media @mobile {
+      display: none;
+    }
   
     .jump {
       color: @jump-color;
