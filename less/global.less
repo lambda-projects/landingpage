@@ -33,22 +33,62 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 7.2rem;
   color: @h1-color;
+
+  @media @tablet {
+    font-size: 6.6rem;
+  }
+
+  @media @mobile {
+    font-size: 5.7rem;
+  }
 }
 
 h2 {
   font-size: 6rem;
+
+  @media @tablet {
+    font-size: 5.4rem;
+  }
+
+  @media @mobile {
+    font-size: 4.8rem;
+  }
 }
 
 h3 {
   font-size: 4.8rem;
+
+  @media @tablet {
+    font-size: 4.2;
+  }
+
+  @media @mobile {
+    font-size: 3.6rem;
+  }
 }
 
 h4 {
   font-size: 3.6rem;
+
+  @media @tablet {
+    font-size: 3rem;
+  }
+
+  @media @mobile {
+    font-size: 2.4;
+  }
 }
 
 h5 {
   font-size: 2.4rem;
+
+  @media @tablet {
+    font-size: 2rem;
+  }
+
+  @media @mobile {
+    font-size: 1.6rem;
+  }
 }
 
 // Paragraph Styling
@@ -56,7 +96,7 @@ p {
   margin-bottom: 2.4rem;
   line-height: 1.25;
 
-  &:p1, &.tagline {
+  &:p1, &.tagline, &.dev-role {
     font-size: 2rem;
   }
 }
@@ -64,6 +104,18 @@ p {
 // Icon Styling
 i {
   padding-right: 0.5em;
+
+  &.block-top, &.block-bot {
+    padding-right: 0;
+  }
+
+  &.block-top {
+    padding-bottom: 0.5em;
+  }
+
+  &.block-bot {
+    padding-top: 0.5em;
+  }
 }
 
 // Span Preferred Line Break
@@ -128,10 +180,29 @@ button {
   }
 
   // &:.spotlights {}
-  // .spotlight {}
-  // .spot-content {
-  //   .max-w;
-  // }
+  .spotlight {
+    .flex;
+    flex-wrap: wrap;
+
+    &.rev {
+      flex-wrap: wrap-reverse;
+      .img-wrap {
+        order: 1;
+      }
+    }
+
+    &.bg-1, &.bg-2 {
+      padding: 0;
+    }
+
+    .img-wrap {
+      height: 100%;
+    }
+  }
+  .spot-content {
+    .max-w;
+    padding: 2rem 0;
+  }
 
   .grid-wrap {
     max-width: 1000px;
