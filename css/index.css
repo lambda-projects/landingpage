@@ -211,6 +211,9 @@ button.cta:hover {
   color: white;
   padding: 3rem 0;
 }
+.bg-1 a {
+  color: #9FA9B2;
+}
 .bg-2 {
   width: 100%;
   display: flex;
@@ -220,6 +223,9 @@ button.cta:hover {
   background-color: #666666;
   color: white;
   padding: 3rem 0;
+}
+.bg-2 a {
+  color: #9FA9B2;
 }
 .section-wrap {
   display: flex;
@@ -232,6 +238,7 @@ button.cta:hover {
 }
 .section-wrap .banner-wrap {
   max-width: 800px;
+  margin: 0 2rem;
 }
 .section-wrap .banner {
   text-align: center;
@@ -253,7 +260,8 @@ button.cta:hover {
 .nav-site .nav-link {
   color: #D3D7C8;
   text-decoration: none;
-  padding: 1.5rem 0;
+  padding: 1.5rem;
+  margin: 0 1.5rem;
 }
 .splash {
   min-height: 100vh;
@@ -268,14 +276,17 @@ button.cta:hover {
   align-items: center;
   flex-direction: row;
   flex: 1 1 auto;
-  margin: 0 2rem;
   min-height: 100%;
   max-width: 800px;
+  margin: 0 2rem;
 }
 .splash .header-section .header-content {
   padding: 2rem;
   background-color: rgba(255, 255, 255, 0.35);
   border-radius: 1rem;
+}
+.splash .header-section a {
+  color: #9FA9B2;
 }
 .splash .nav-page {
   display: flex;
@@ -289,12 +300,16 @@ button.cta:hover {
 .splash .nav-page .jump {
   color: white;
   text-decoration: none;
-  padding: 3rem 0;
+  padding: 0 3rem;
+  margin: 3rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.splash .nav-page .jump i {
-  padding: 1rem;
+.splash .nav-page .jump i.block-top {
+  padding-bottom: 1rem;
+}
+.splash .nav-page .jump i.block-bot {
+  padding-top: 1rem;
 }

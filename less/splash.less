@@ -5,7 +5,6 @@
   .header-section {
     .center;
     flex: 1 1 auto;
-    margin: 0 2rem;
     min-height: 100%;
     .max-w;
   
@@ -13,6 +12,10 @@
       padding: 2rem;
       background-color: @header-bg;
       border-radius: 1rem;
+    }
+
+    a {
+      color: @header-a;
     }
   }
 
@@ -25,11 +28,18 @@
     .jump {
       color: @jump-color;
       text-decoration: none;
-      padding: 3rem 0;
+      padding: 0 3rem;
+      margin: 3rem 0;
       .center(column);
 
       i {
-        padding: 1rem;
+        &.block-top {
+          padding-bottom: 1rem;
+        }
+
+        &.block-bot {
+          padding-top: 1rem;
+        }
       }
     }
   }
