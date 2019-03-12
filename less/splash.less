@@ -1,0 +1,29 @@
+.splash {
+  min-height: 100vh;
+  .flex(column, space-between);
+
+  .header-section {
+    .center;
+    flex: 1 1 auto;
+    margin: 0 2rem;
+    min-height: 100%;
+  
+    .header-content {
+      padding: 2rem;
+      background-color: rgba(255, 255, 255, .35);
+      border-radius: 1rem;
+    }
+  }
+
+  .nav-page {
+    .flex(row, space-evenly, center);
+    flex-wrap: wrap;
+    flex: 0 1 auto;
+  
+    .jump {
+      color: black;
+      text-decoration: none;
+      padding: 3rem 0;
+    }
+  }
+}

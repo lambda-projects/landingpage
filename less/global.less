@@ -16,6 +16,7 @@ body {
   background-image: url('../img/bg_placeholder.png');
   background-size: cover;
   background-position: 50%;
+  background-attachment: fixed;
 }
 
 img {
@@ -26,10 +27,12 @@ img {
 // H1-H6 Styling
 h1, h2, h3, h4, h5, h6 {
   font-family: @font-header;
+  margin-bottom: 2.4rem;
 }
 
 h1 {
   font-size: 7.2rem;
+  color: @h1-color;
 }
 
 h2 {
@@ -53,7 +56,7 @@ p {
   margin-bottom: 2.4rem;
   line-height: 1.25;
 
-  &.tagline {
+  &:p1, &.tagline {
     font-size: 2rem;
   }
 }
@@ -61,5 +64,17 @@ p {
 // Button Styling
 button {
   cursor: pointer;
-  .cta {}
+  padding: 1rem 2rem;
+  border: 0;
+  border-radius: 0.5rem;
+
+  &.cta {
+    background: @cta-bg;
+    color: white;
+  }
+}
+
+// Main
+main {
+  
 }
