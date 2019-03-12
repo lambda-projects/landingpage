@@ -146,6 +146,7 @@ html {
 body {
   font-size: 1.6rem;
   font-family: 'Open Sans', sans-serif;
+  color: #D3D7C8;
   width: 100%;
   height: 100%;
   min-height: 100vh;
@@ -261,8 +262,10 @@ span.break {
 button {
   cursor: pointer;
   padding: 1rem 2rem;
+  margin: 1rem;
   border: 0;
   border-radius: 0.5rem;
+  outline: none;
 }
 button.cta {
   background: #A51212;
@@ -337,6 +340,19 @@ button.cta:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+.spacer {
+  height: 25vh;
+}
+@media (max-width: 800px) {
+  .spacer {
+    height: 20vh;
+  }
+}
+@media (max-width: 500px) {
+  .spacer {
+    height: 15vh;
+  }
 }
 .bg-1 {
   width: 100%;
@@ -442,7 +458,8 @@ button.cta:hover {
   flex-wrap: wrap-reverse;
 }
 .section-wrap .grid-cell {
+  height: 100%;
   margin: 2rem;
   padding: 2rem;
-  flex: 1 1 40rem;
+  flex: 1 1 35rem;
 }
