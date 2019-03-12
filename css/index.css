@@ -351,6 +351,10 @@ button.cta:hover {
 .bg-1 a {
   color: #9FA9B2;
 }
+.bg-1 .grid-cell {
+  background-color: #666666;
+  color: #D3D7C8;
+}
 .bg-2 {
   width: 100%;
   display: flex;
@@ -363,6 +367,10 @@ button.cta:hover {
 }
 .bg-2 a {
   color: #9FA9B2;
+}
+.bg-2 .grid-cell {
+  background-color: #4F5A62;
+  color: #D3D7C8;
 }
 .section-wrap {
   display: flex;
@@ -429,7 +437,13 @@ button.cta:hover {
 .section-wrap .grid-wrap {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: stretch;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
   max-width: 1000px;
+}
+.section-wrap .grid-cell {
+  margin: 2rem;
+  padding: 2rem;
+  flex: 1 1 40rem;
 }

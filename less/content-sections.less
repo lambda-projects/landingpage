@@ -10,6 +10,11 @@
     a {
       color: @content1-a;
     }
+
+    .grid-cell {
+      background-color: @content2-bg;
+      color: @content2-color;
+    }
   }
   &-2 {
     width: 100%;
@@ -20,6 +25,11 @@
 
     a {
       color: @content2-a;
+    }
+
+    .grid-cell {
+      background-color: @content1-bg;
+      color: @content1-color;
     }
   }
 }
@@ -84,10 +94,14 @@
     text-align: center;
   }
   .grid-wrap {
-    .flex;
+    .flex(row, space-around, center);
+    flex-wrap: wrap;
     max-width: 1000px;
     // text-align: start;
   }
   .grid-cell {
+    margin: 2rem;
+    padding: 2rem;
+    flex: 1 1 40rem;
   }
 }
