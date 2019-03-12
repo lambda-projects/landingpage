@@ -338,6 +338,9 @@ button.cta:hover {
   margin: 0 2rem;
   padding: 2rem 0;
 }
+.section-wrap.grid {
+  text-align: center;
+}
 .section-wrap .grid-wrap {
   max-width: 1000px;
 }
