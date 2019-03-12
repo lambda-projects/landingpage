@@ -25,6 +25,7 @@ Icons            | [Font Awesome (Free)](https://fontawesome.com/) | `none`
 Color Variables   | Hex Values |
 ---               |---         |
 @gvhm-red         | #A51212    |
+@gvhm-lightred    | #AD2727    |
 @gvhm-darkgrey    | #666666    |
 @gvhm-darkbluish  | #4F5A62    |
 @gvhm-lightbluish | #9FA9B2    |

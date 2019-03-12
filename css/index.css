@@ -195,6 +195,9 @@ button.cta {
   background: #A51212;
   color: white;
 }
+button.cta:hover {
+  background: #AD2727;
+}
 .section-wrap {
   display: flex;
   justify-content: center;
