@@ -94,10 +94,9 @@
     text-align: center;
   }
   .grid-wrap {
-    .flex(row, space-around, center);
-    flex-wrap: wrap;
-    max-width: 1000px;
-    // text-align: start;
+    // Using both row-reverse and wrap-reverse so that a top feature can be easily highlighted by itself, but requires grid-cells to be ordered backwards in HTML
+    .flex(row-reverse, space-between, center);
+    flex-wrap: wrap-reverse;
   }
   .grid-cell {
     margin: 2rem;
