@@ -268,22 +268,19 @@ p {
   margin-bottom: 2.4rem;
   line-height: 1.25;
 }
-p:p1,
-p.tagline,
-p.dev-role {
+p.p1,
+p.tagline {
   font-size: 2rem;
 }
 @media (max-width: 500px) {
-  p:p1,
-  p.tagline,
-  p.dev-role {
+  p.p1,
+  p.tagline {
     font-size: 1.6rem;
   }
 }
 @media (max-width: 350px) {
-  p:p1,
-  p.tagline,
-  p.dev-role {
+  p.p1,
+  p.tagline {
     font-size: 1.4rem;
   }
 }
