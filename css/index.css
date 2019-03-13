@@ -329,6 +329,11 @@ button.cta:hover {
   position: fixed;
   z-index: 2;
 }
+@media (max-width: 350px) {
+  .nav-site {
+    position: static;
+  }
+}
 .nav-site .nav-link {
   color: #D3D7C8;
   text-decoration: none;
@@ -506,4 +511,9 @@ button.cta:hover {
   margin: 2rem;
   padding: 2rem;
   flex: 1 1 35rem;
+}
+@media (max-width: 500px) {
+  .section-wrap .grid-cell {
+    flex: 1 1 25rem;
+  }
 }
