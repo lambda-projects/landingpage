@@ -453,6 +453,16 @@ button.cta:hover {
 .section-wrap .banner {
   text-align: center;
 }
+.section-wrap .carousel-wrap {
+  max-width: 800px;
+  margin: 0 2rem;
+}
+.section-wrap .carousel-wrap img {
+  display: none;
+}
+.section-wrap .carousel-wrap img.img-active {
+  display: block;
+}
 .section-wrap .spotlight {
   display: flex;
   flex-direction: row;
