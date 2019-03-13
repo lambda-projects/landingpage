@@ -495,9 +495,11 @@ button.cta:hover {
   object-fit: cover;
 }
 .section-wrap .spotlight .spot-content {
+  height: 100%;
   max-width: 800px;
   margin: 0 2rem;
   padding: 2rem 0;
+  align-self: center;
 }
 .section-wrap.grid {
   text-align: center;
