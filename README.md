@@ -1,4 +1,4 @@
-# Gun Violence Heat Maps | Landing Page
+# Shots Fired | Landing Page
 
 **Live Site:** <https://gvhm-marketing.netlify.com>
 
