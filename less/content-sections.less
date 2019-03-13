@@ -113,9 +113,8 @@
     text-align: center;
   }
   .grid-wrap {
-    // Using both row-reverse and wrap-reverse so that a top feature can be easily highlighted by itself, but requires grid-cells to be ordered backwards in HTML
-    .flex(row-reverse, space-between, center);
-    flex-wrap: wrap-reverse;
+    .flex(row, space-between, center);
+    flex-wrap: wrap;
   }
   .grid-cell {
     height: 100%;

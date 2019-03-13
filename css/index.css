@@ -504,10 +504,10 @@ button.cta:hover {
 }
 .section-wrap .grid-wrap {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap-reverse;
+  flex-wrap: wrap;
 }
 .section-wrap .grid-cell {
   height: 100%;
