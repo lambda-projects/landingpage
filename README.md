@@ -1,6 +1,6 @@
 # Shots Fired | Landing Page
 
-**Live Site:** <https://gvhm-marketing.netlify.com>
+**Live Site:** <https://shots-fired-marketing.netlify.com>
 
 ## User Interface Developer | Matt Poloni
 
