@@ -1,6 +1,6 @@
 # Gun Violence Heat Maps | Landing Page
 
-**Live Site:** <https://matt-poloni-gvhm-landing.netlify.com/>
+**Live Site:** <https://gvhm-marketing.netlify.com>
 
 ## User Interface Developer | Matt Poloni
 
