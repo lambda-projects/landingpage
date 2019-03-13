@@ -450,6 +450,9 @@ button.cta:hover {
   max-width: 800px;
   margin: 0 2rem;
 }
+.section-wrap .banner-wrap.p-left p {
+  text-align: left;
+}
 .section-wrap .banner {
   text-align: center;
 }
