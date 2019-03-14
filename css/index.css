@@ -499,10 +499,10 @@ button.cta:hover {
   position: absolute;
   top: 50%;
 }
-.section-wrap .carousel-wrap .car-btn.left {
+.section-wrap .carousel-wrap .car-btn.prev {
   left: 3%;
 }
-.section-wrap .carousel-wrap .car-btn.right {
+.section-wrap .carousel-wrap .car-btn.next {
   right: 3%;
 }
 .section-wrap .carousel-wrap .car-btn:hover {
