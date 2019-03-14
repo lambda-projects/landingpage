@@ -53,12 +53,12 @@ The navbar is a simple `nav` element set outside the `main` element of the page 
 ### Splash Section
 
 `div.splash`
-  `header.header-section`
-    `div.header-content`
-      `h1`
-      `p.tagline` (optional)
-      `div.cta-wrap` (optional)
-        `button.cta` (optional)
+    `header.header-section`
+      `div.header-content`
+        `h1`
+        `p.tagline` (optional)
+        `div.cta-wrap` (optional)
+          `button.cta` (optional)
 
 ### Banner Sections
 
