@@ -479,6 +479,8 @@ button.cta:hover {
   align-items: center;
   flex-direction: row;
   margin: 2rem 0;
+  position: relative;
+  overflow: hidden;
 }
 .section-wrap .carousel-wrap img {
   display: none;
@@ -494,6 +496,14 @@ button.cta:hover {
   border-radius: 50%;
   padding: 0.2rem;
   cursor: pointer;
+  position: absolute;
+  top: 50%;
+}
+.section-wrap .carousel-wrap .car-btn.left {
+  left: 3%;
+}
+.section-wrap .carousel-wrap .car-btn.right {
+  right: 3%;
 }
 .section-wrap .carousel-wrap .car-btn:hover {
   color: #9FA9B2;

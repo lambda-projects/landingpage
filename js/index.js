@@ -26,4 +26,5 @@ class Carousel {
   }
 }
 
-let carousel = new Carousel(document.querySelector('.carousel-wrap'));
+let carousels = Array.from(document.querySelectorAll('.carousel-wrap'));
+carousels.map(crsl => new Carousel(crsl));
