@@ -32,8 +32,13 @@ carousels.map(crsl => new Carousel(crsl));
 class JumpNav {
     constructor(jumpNav) {
         this.jumpNav = jumpNav;
+        this.jumpLinks = jumpNav.querySelectorAll('.jump');
+        this.jumpLinks.forEach(link => link.addEventListener('click', this.jump.bind(this)));
+        console.log(this.jumpLinks);
     }
+    jump() {}
 }
 
 let jumpLinks = document.querySelector('.nav-page');
-console.log(jumpLinks);
+jumpLinks = new JumpNav(jumpLinks);
+// console.log(jumpLinks);
