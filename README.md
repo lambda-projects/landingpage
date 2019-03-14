@@ -58,10 +58,30 @@ The navbar is a simple `nav` element set outside the `main` element of the page 
         * `h1`
         * `p.tagline` (optional)
         * `div.cta-wrap` (optional)
-          * `button.cta` (optional)
+          * `button.cta.p1` (optional, multiple)
+    * `nav.nav-page`
+        * `div.jump[data-sec={section}]` (multiple)
 
 ### Banner Sections
 
+* `section.section-wrap.banners[data-sec={section}]`
+    * `div.banner-wrap`
+        * banner content
+
 ### Spotlight Sections
 
+* `section.section-wrap.spotlights[data-sec={section}]` (`.rev` optional)
+    * `section.spotlight.bg-2`
+        * `div.img-wrap`
+            * `img`
+        * `div.spot-content`
+            * image-relevant content
+
 ### Grid Sections
+
+* `section.section-wrap.grid[data-sec={section}]`
+    * `div.banner-wrap` (grid header)
+        * header content
+    * `div.grid-wrap`
+        * `div.grid-cell`
+            * cell content
