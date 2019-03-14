@@ -48,25 +48,35 @@ Each page has a fixed navbar, a "splash page"-style section that encapsulates th
 
 ### Navbar
 
-* `body` (fixed background image w/ `background-size: cover`)
-    * `nav.nav-site`
+* `body`
+    * `nav.nav-site` (first element inside `body`)
         * `a.nav-link`
             * link content
 
 The navbar is a simple `nav` element set outside the `main` element of the page and fixed to the top of the site, using flexbox to space the site navigation links evenly across the top of the page. At particularly small screen widths (below 350px) the navbar goes static in order to free-up room on the screen while scrolling.
 
+
 ### Splash Section
 
-* `div.splash`
-    * `header.header-section`
-      * `div.header-content`
-        * `h1`
-        * `p.tagline` (optional)
-        * `div.cta-wrap` (optional)
-          * `button.cta.p1` (optional, multiple)
-    * `nav.nav-page`
-        * `div.jump[data-sec={section}]` (multiple)
-            * jump link content
+* `main`
+    * `div.splash` (first element inside `main`)
+        * `header.header-section`
+          * `div.header-content` (optional wrapper)
+            * `h1`
+            * `p.tagline` (optional)
+            * `div.cta-wrap` (optional)
+              * `button.cta.p1` (optional, multiple)
+        * `nav.nav-page`
+            * `div.jump[data-sec={section}]` (multiple)
+                * jump link content
+
+In order to fully display the background image fixed to the `body` element, this section has no background of its own and the wrapper has a minimum height of `100vh`. The minimum is there in case the content were to overflow somehow, which is advised against. Using flexbox, child elements are positioned in a column with `justify-content: space-between` and `align-items:center`.
+
+The first of that wrapper's two child elements is the page's header, which has a minimum height of 100%, sets the max-width to the common max-width value, and uses flexbox to center its child elements.
+
+If needed, an optional wrapper can be used that would be useful if the header content doesn't contrast well with the page's background. Otherwise, the page's `h1`, `p.tagline`, `button.cta.p`, and any other content can be put directly into the header. Also, if more than one call-to-action button is needed, they can be wrapped in a div that is ready-made for that purpose, though currently unstyled.
+
+At the bottom of the splash section is another `nav` section, a sibling to the header, which specifically has jump-links to the major content sections within `main`. These `div`s are each set with a `data-sec` attribute matching the same attribute on one of the page's major content sections. Javascript will automatically find the links, find their matching content, and use an event listener to smoothly scroll to the start of that element. 
 
 ### Banner Sections
 
@@ -89,5 +99,9 @@ The navbar is a simple `nav` element set outside the `main` element of the page 
     * `div.banner-wrap` (grid header)
         * header content
     * `div.grid-wrap`
-        * `div.grid-cell`
+        * `div.grid-cell` (multiple)
             * cell content
+
+### Spacer Divs
+
+* `div.spacer`
