@@ -73,8 +73,13 @@
     .max-w;
     .center;
     margin: 2rem 0;
+    padding: 0 2.25rem;
     position: relative;
-    overflow: hidden;
+
+    @media @mobile-sm {
+      margin: 1.5rem 0;
+      padding: 0 1.75rem;
+    }
 
     img {
       display: none;
@@ -94,12 +99,13 @@
       cursor: pointer;
       position: absolute;
       top: 50%;
+      transform: translate(0, -50%);
 
       &.prev {
-        left: 3%;
+        left: 0;
       }
       &.next {
-        right: 3%;
+        right: 0;
       }
 
       &:hover {
@@ -110,6 +116,10 @@
         margin: 0;
         padding: 0;
         font-size: 4rem;
+
+        @media @mobile-sm {
+          font-size: 3rem;
+        }
       }
     }
   }

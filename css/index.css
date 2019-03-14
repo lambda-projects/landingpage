@@ -479,8 +479,14 @@ button.cta:hover {
   align-items: center;
   flex-direction: row;
   margin: 2rem 0;
+  padding: 0 2.25rem;
   position: relative;
-  overflow: hidden;
+}
+@media (max-width: 350px) {
+  .section-wrap .carousel-wrap {
+    margin: 1.5rem 0;
+    padding: 0 1.75rem;
+  }
 }
 .section-wrap .carousel-wrap img {
   display: none;
@@ -498,12 +504,13 @@ button.cta:hover {
   cursor: pointer;
   position: absolute;
   top: 50%;
+  transform: translate(0, -50%);
 }
 .section-wrap .carousel-wrap .car-btn.prev {
-  left: 3%;
+  left: 0;
 }
 .section-wrap .carousel-wrap .car-btn.next {
-  right: 3%;
+  right: 0;
 }
 .section-wrap .carousel-wrap .car-btn:hover {
   color: #9FA9B2;
@@ -512,6 +519,11 @@ button.cta:hover {
   margin: 0;
   padding: 0;
   font-size: 4rem;
+}
+@media (max-width: 350px) {
+  .section-wrap .carousel-wrap .car-btn i {
+    font-size: 3rem;
+  }
 }
 .section-wrap .spotlight {
   display: flex;
