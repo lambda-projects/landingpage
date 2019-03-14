@@ -618,6 +618,5 @@ button.cta {
   .section-wrap .grid-cell {
     height: auto;
     flex: 1 1 25rem;
-    width: 100%;
   }
 }
