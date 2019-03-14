@@ -76,13 +76,36 @@ The first of that wrapper's two child elements is the page's header, which has a
 
 If needed, an optional wrapper can be used that would be useful if the header content doesn't contrast well with the page's background. Otherwise, the page's `h1`, `p.tagline`, `button.cta.p`, and any other content can be put directly into the header. Also, if more than one call-to-action button is needed, they can be wrapped in a div that is ready-made for that purpose, though currently unstyled.
 
-At the bottom of the splash section is another `nav` section, a sibling to the header, which specifically has jump-links to the major content sections within `main`. These `div`s are each set with a `data-sec` attribute matching the same attribute on one of the page's major content sections. Javascript will automatically find the links, find their matching content, and use an event listener to smoothly scroll to the start of that element. 
+At the bottom of the splash section is another `nav` section, a sibling to the header, which specifically has jump-links to the major content sections within `main`. The jump links section is set to spread them evenly along the bottom of the splash section and disappear at mobile widths (500px and below).
+
+These jump-link `div`s are each set with a `data-sec` attribute matching the same attribute on one of the page's major content sections. Javascript will automatically find the links, find their matching content, and use an event listener to smoothly scroll to the start of that element. 
+
+
+### Generic Section Wrapper
+
+* `section.section-wrap[data-sec={section}]`
+
+These `sections` with class `section-wrap` merely use flexbox to layout their direct children in a column, centered both vertically and horizontally. They wrap every major content section and take a `data-sec` attribute that's matched with the same attribute on one of the jump-links at the bottom of the splash section.
 
 ### Banner Sections
 
 * `section.section-wrap.banners[data-sec={section}]`
     * `div.banner-wrap`
         * banner content
+
+The simplest of the content sections, this `section` merely centers its text as a default before its child element `.banner-wrap` sets a max-width for whatever content you wish to display within it, such as a carousel.
+
+#### Carousel
+
+* `section.section-wrap.banners[data-sec={section}]`
+    * `div.banner-wrap`
+        * header content
+      * `div.carousel-wrap`
+          * `div.car-btn.prev`
+          * `img` (multiple)
+          * `div.car-btn.next`
+
+The carousel wrapper sets the common max-width, uses flexbox to center everything vertically and horizontally, and sets margin and padding to allow for proper alignment of the carousel's previous and next buttons. The buttons are simply set to straddle their respective edge of the carousel images.
 
 ### Spotlight Sections
 
