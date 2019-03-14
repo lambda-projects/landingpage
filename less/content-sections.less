@@ -173,12 +173,22 @@
   .grid-wrap {
     .flex(row, space-between, center);
     flex-wrap: wrap;
+
+    @media @tablet {
+      .center(column);
+      flex-wrap: nowrap;
+    }
   }
   .grid-cell {
-    height: 100%;
+    height: 30rem;
     margin: 2rem;
     padding: 2rem;
     flex: 1 1 35rem;
+
+    @media @tablet {
+      height: auto;
+      width: 100%;
+    }
 
     @media @mobile {
       flex: 1 1 25rem;

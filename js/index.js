@@ -45,15 +45,27 @@ class JumpLink {
     constructor(jumpLink) {
         this.jumpLink = jumpLink;
         this.jumpLink.addEventListener('click', this.jump.bind(this));
+        this.data = this.jumpLink.dataset.sec;
+        this.section = document.querySelector(`section[data-sec='${this.data}'`);
     }
     jump() {
-        console.log('clicked');
-        element.scrollIntoView();
+        this.section.scrollIntoView({behavior: "smooth", block: "start"});
     }
 }
 
 let jumpLinks = document.querySelector('.nav-page');
 jumpLinks = new JumpNav(jumpLinks);
 
-// var elmnt = document.getElementById("content");
-// elmnt.scrollIntoView();
+
+
+
+// Button Hover
+class Button {
+    constructor(button) {
+        this.button = button;
+        this.button.addEventListener('mouseover', e => e.target.style.background = '#AD2727');
+        this.button.addEventListener('mouseout', e => e.target.style.background = '#A51212');
+    }
+}
+let buttons = document.querySelectorAll('button');
+buttons.forEach(btn => new Button(btn));
