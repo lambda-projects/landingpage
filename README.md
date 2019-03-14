@@ -72,11 +72,26 @@ The navbar is a simple `nav` element set outside the `main` element of the page 
 
 In order to fully display the background image fixed to the `body` element, this section has no background of its own and the wrapper has a minimum height of `100vh`. The minimum is there in case the content were to overflow somehow, which is advised against. Using flexbox, child elements are positioned in a column with `justify-content: space-between` and `align-items:center`.
 
+#### Page Header
+
+* `header.header-section`
+    * `div.header-content` (optional wrapper)
+        * `h1`
+        * `p.tagline` (optional)
+        * `div.cta-wrap` (optional)
+            * `button.cta.p1` (optional, multiple)
+
 The first of that wrapper's two child elements is the page's header, which has a minimum height of 100%, sets the max-width to the common max-width value, and uses flexbox to center its child elements.
 
 If needed, an optional wrapper can be used that would be useful if the header content doesn't contrast well with the page's background. Otherwise, the page's `h1`, `p.tagline`, `button.cta.p`, and any other content can be put directly into the header. Also, if more than one call-to-action button is needed, they can be wrapped in a div that is ready-made for that purpose, though currently unstyled.
 
-At the bottom of the splash section is another `nav` section, a sibling to the header, which specifically has jump-links to the major content sections within `main`. The jump links section is set to spread them evenly along the bottom of the splash section and disappear at mobile widths (500px and below).
+#### Jump Links
+
+* `nav.nav-page`
+    * `div.jump[data-sec={section}]` (multiple)
+        * jump link content
+
+At the bottom of the splash section is another `nav` section, which specifically has jump-links to the major content sections within `main`. The jump links section is set to spread them evenly along the bottom of the splash section and disappear at mobile widths (500px and below).
 
 These jump-link `div`s are each set with a `data-sec` attribute matching the same attribute on one of the page's major content sections. Javascript will automatically find the links, find their matching content, and use an event listener to smoothly scroll to the start of that element. 
 
@@ -107,6 +122,15 @@ The simplest of the content sections, this `section` merely centers its text as 
 
 The carousel wrapper sets the common max-width, uses flexbox to center everything vertically and horizontally, and sets margin and padding to allow for proper alignment of the carousel's previous and next buttons. The buttons are simply set to straddle their respective edge of the carousel images.
 
+### Grid Sections
+
+* `section.section-wrap.grid[data-sec={section}]`
+    * `div.banner-wrap` (grid header)
+        * header content
+    * `div.grid-wrap`
+        * `div.grid-cell` (multiple)
+            * cell content
+
 ### Spotlight Sections
 
 * `section.section-wrap.spotlights[data-sec={section}]` (`.rev` optional)
@@ -116,14 +140,9 @@ The carousel wrapper sets the common max-width, uses flexbox to center everythin
         * `div.spot-content`
             * image-relevant content
 
-### Grid Sections
+Spotlight sections are set to show an image flush against the left of the screen (or right of the screen with `.rev`) with relevant content next to it at desktop-size screen widths.
 
-* `section.section-wrap.grid[data-sec={section}]`
-    * `div.banner-wrap` (grid header)
-        * header content
-    * `div.grid-wrap`
-        * `div.grid-cell` (multiple)
-            * cell content
+
 
 ### Spacer Divs
 
