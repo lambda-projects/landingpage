@@ -171,7 +171,7 @@ h4,
 h5,
 h6 {
   font-family: 'Playfair Display SC', serif;
-  margin: 3rem 0 2.4rem;
+  margin: 0.5em 0 0.25em;
 }
 h1 {
   font-size: 7.2rem;
@@ -456,12 +456,32 @@ button.cta:hover {
 .section-wrap .carousel-wrap {
   max-width: 800px;
   margin: 0 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 .section-wrap .carousel-wrap img {
   display: none;
 }
 .section-wrap .carousel-wrap img.img-active {
   display: block;
+}
+.section-wrap .carousel-wrap .car-btn {
+  z-index: 1;
+  background: black;
+  color: #D3D7C8;
+  border-radius: 50%;
+  padding: 0.2rem;
+  cursor: pointer;
+}
+.section-wrap .carousel-wrap .car-btn:hover {
+  color: #9FA9B2;
+}
+.section-wrap .carousel-wrap .car-btn i {
+  margin: 0;
+  padding: 0;
+  font-size: 4rem;
 }
 .section-wrap .spotlight {
   display: flex;
