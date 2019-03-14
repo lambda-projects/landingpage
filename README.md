@@ -30,6 +30,7 @@ Color Variables   | Hex Values |
 @gvhm-darkbluish  | #4F5A62    |
 @gvhm-lightbluish | #9FA9B2    |
 @gvhm-lightgrey   | #D3D7C8    |
+@gvhm-deepblue    | #0A3C60    |
 
 [Visualization of color scheme](https://coolors.co/a51212-666666-4f5a62-9fa9b2-d3d7c8) on coolors.com.
 
