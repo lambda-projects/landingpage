@@ -38,9 +38,20 @@ Color scheme inspired by [this palette](https://www.colourlovers.com/palette/453
 
 ## Most Recent Style Guide
 
-Style guide image produced by [Andrew Benedict]
+Style guide image produced by [Andrew Benedict](https://github.com/atbenedict), our Back End Architect.
 
 ![Style Guide v01](/design-files/StyleGuide-v01.png)
 
-## File Structure & Organization
+## Page Structure & Organization
 
+Each page has a fixed navbar, a "splash page"-style header, and any of three types of content sections with optional spacer divs.
+
+### Navbar
+
+### Page Header
+
+### Banner Sections
+
+### Spotlight Sections
+
+### Grid Sections
