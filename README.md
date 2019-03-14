@@ -1,6 +1,6 @@
-# Gun Violence Heat Maps | Landing Page
+# Shots Fired | Landing Page
 
-**Live Site:** <https://matt-poloni-gvhm-landing.netlify.com/>
+**Live Site:** <https://shots-fired-marketing.netlify.com>
 
 ## User Interface Developer | Matt Poloni
 
@@ -30,12 +30,15 @@ Color Variables   | Hex Values |
 @gvhm-darkbluish  | #4F5A62    |
 @gvhm-lightbluish | #9FA9B2    |
 @gvhm-lightgrey   | #D3D7C8    |
+@gvhm-deepblue    | #0A3C60    |
 
 [Visualization of color scheme](https://coolors.co/a51212-666666-4f5a62-9fa9b2-d3d7c8) on coolors.com.
 
 Color scheme inspired by [this palette](https://www.colourlovers.com/palette/453310/Sound_Of_A_Gun).
 
 ## Most Recent Style Guide
+
+Style guide image produced by [Andrew Benedict]
 
 ![Style Guide v01](/design-files/StyleGuide-v01.png)
 

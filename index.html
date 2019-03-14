@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Gun Violence Heat Maps</title>
+  <title>Shots Fired</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="./css/index.css" rel="stylesheet" type="text/css">
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display+SC" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <!-- JS -->
   <script src="./js/index.js" async></script>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon/site.webmanifest">
+  <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#a51212">
+  <link rel="shortcut icon" href="img/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#9fa9b2">
+  <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#9fa9b2">
 
 </head>
 
@@ -22,42 +37,79 @@
         About Us
       </a>
     </nav> <!-- nav-site -->
+
     <main>
       <div class="splash">
         <header class="header-section">
           <div class="header-content">
             <h1>
-              <span class="break">Gun Violence</span>
-              <span class="break">Heat Maps</span>
+              Shots Fired
             </h1>
-            <p class="tagline">Visualising the facts behind gun violence in the United States</p>
+            <p class="tagline">Stay educated. Stay safe. Visualizing the facts behind gun violence in America.</p>
             <div class="cta-wrap">
-              <button class="cta p1">
+              <button class="cta p1" onclick="location.href='https://tico-shots-fired-app.netlify.com/'">
                 <i class="fas fa-desktop"></i>
                 See Visualizations
               </button>
-              <button class="cta p1">
+              <!-- <button class="cta p1">
                 <i class="fas fa-envelope"></i>
                 Get Email Alerts
-              </button>
+              </button> -->
+              <!-- <button class="cta p1">
+                <i class="fas fa-sign-in-alt"></i>
+                Login or Sign Up
+              </button> -->              
             </div> <!-- cta-wrap -->
           </div> <!-- header-content -->
         </header> <!-- header-section -->
+
         <nav class="nav-page">
-          <a class="jump" href="#data-info">
+          <div class="jump" data-sec="previews">
+            <i class="fas fa-search block-top"></i>
+            Content Previews<br />
+            <i class="fas fa-chevron-down block-bot"></i>
+          </div> 
+          <div class="jump" data-sec="data-info">
             <i class="fas fa-database block-top"></i>
             Our Dataset<br />
             <i class="fas fa-chevron-down block-bot"></i>
-          </a>
-          <a class="jump" href="#features">
-              <i class="fas fa-list block-top"></i>
+          </div>
+          <div class="jump" data-sec="features">
+            <i class="fas fa-list block-top"></i>
             Project Features<br />
             <i class="fas fa-chevron-down block-bot"></i>
-          </a>
-          <!-- <a class="jump" href="#top-viz">Jump Link 3</a> -->
+          </div> 
         </nav> <!-- nav-page -->
       </div> <!-- splash -->
-      <section class="section-wrap banners" id="data-info">
+
+      <section class="section-wrap banners bg-1" data-sec="previews">
+        <div class="banner-wrap">
+          <h2>
+            <i class="fas fa-search block-top"></i><br />
+            Content Previews
+          </h2>
+        </div> <!-- banner-wrap -->
+        
+        <div class="carousel-wrap">
+          <div class="car-btn prev">
+            <i class="fas fa-arrow-alt-circle-left"></i>
+          </div>
+
+          <img src="./img/previews/top-20-states-01.png" />
+          <img src="./img/previews/top-20-states-02.png" />
+          <img src="./img/previews/mass-shooting-locations-01.png" />
+          <img src="./img/previews/TX-gun-violence-01.png" />
+          <img src="./img/previews/TX-gun-violence-02.png" />
+
+          <div class="car-btn next">
+            <i class="fas fa-arrow-alt-circle-right"></i>
+          </div>
+        </div> <!-- carousel-wrap -->
+      </section>
+
+      <div class="spacer"></div>
+      
+      <section class="section-wrap banners" data-sec="data-info">
         <div class="bg-1">
           <div class="banner-wrap">
             <h2>
@@ -67,93 +119,118 @@
           </div> <!-- banner-wrap -->
         </div> <!-- bg-1 -->
         <div class="section-wrap bg-2">
-          <section class="banner" id="gva">
-            <div class="banner-wrap">
-              <h3>Gun Violence Archive</h3>
-              <p>Lorem ipsum <a href="#">dolor sit amet</a> consectetur adipisicing elit. Velit facere explicabo neque esse rerum officiis, nisi ducimus eveniet voluptate mollitia facilis doloribus repellendus tenetur eos.</p>
+          <section class="banner">
+            <div class="banner-wrap p-left">
+              <h3>
+                <!-- <i class="fas fa-server block-top"></i><br /> -->
+                Gun Violence Archive
+              </h3>
+              <p>All of our data originates from the <a href="https://www.gunviolencearchive.org/">Gun Violence Archive</a>, a not for profit corporation formed in 2013 to provide free online public access to accurate information about gun-related violence in the United States. They are an independent data collection and research group with no affiliation to any advocacy organization.</p>
+              <p>Their information is collected from over 2,500 media, law enforcement, government and commercial sources daily in an effort to provide near-real time data about the results of gun violence.</p>
+
+              <h3>
+                <!-- <i class="fab fa-kaggle block-top"></i><br /> -->
+                James Ko's Kaggle Data
+              </h3>
+              <p>In April of 2018, James Ko released <a href="https://www.kaggle.com/jameslko/gun-violence-data">a public dataset on Kaggle</a> scraped off of the Gun Violence Archives website in order to see what various data scientists could do with a more complete resource than what had been readily available up to that point.</p>
+              <p>As of March 2019, <a href="https://www.kaggle.com/jameslko/gun-violence-data/kernels">76 people on Kaggle</a> have worked with the data James provided and hosted their final kernels on the site. That data set has also been used in many other projects that you can find online, including <a href="https://blog.mapbox.com/visualizing-gun-violence-in-america-bb36021b3aae">this article</a> on the Mapbox blog by <a href="https://www.mapbox.com/about/team/mikel-maron/">Mikel Maron</a>.</p>
+
+              <h3>
+                <!-- <i class="fas fa-project-diagram block-top"></i><br /> -->
+                What We've Done
+              </h3>
+              <p>Once we had a hold of James Ko's data from the Gun Violence Archive, we then cleaned up the data as it existed. Adding in the missing incidents that James was unable to originally scrape and using Geocoder to input any missing latitude and longitude were primary among our efforts.</p>
+              <p>With the data cleaned up, we parsed through it to make it more compatible with the various visualizations that we deliver to our end users, fully maintaining the integrity of the original data as it was collected by the Gun Violence Archive.</p>
             </div> <!-- banner-wrap -->
           </section> <!-- banner -->
-          <section class="banner" id="james-ko">
-            <div class="banner-wrap">
-              <h3>James Ko's Kaggle Data</h3>
-              <p>Lorem ipsum <a href="#">dolor sit amet</a> consectetur adipisicing elit. Velit facere explicabo neque esse rerum officiis, nisi ducimus eveniet voluptate mollitia facilis doloribus repellendus tenetur eos.</p>
-            </div> <!-- banner-wrap -->
-          </section> <!-- banner -->
-          <section class="banner" id="our-data">
-            <div class="banner-wrap">
-              <h3>What We've Done</h3>
-              <p>Lorem ipsum <a href="#">dolor sit amet</a> consectetur adipisicing elit. Velit facere explicabo neque esse rerum officiis, nisi ducimus eveniet voluptate mollitia facilis doloribus repellendus tenetur eos.</p>
-            </div> <!-- banner-wrap -->
-          </section> <!-- banner -->
+
         </div> <!-- section-wrap bg-2 -->
       </section> <!-- section-wrap banners -->
-      <section class="section-wrap grid bg-1" id="features">
+
+      <div class="spacer"></div>
+
+      <section class="section-wrap grid bg-1" data-sec="features">
         <div class="banner-wrap">
           <h2>
             <i class="fas fa-list block-top"></i><br />
             Project Features
           </h2>
         </div> <!-- banner-wrap -->
-        <div class="grid-wrap"> <!-- Remember to put features in reverse order-->
+
+        <div class="grid-wrap">
+          <div class="grid-cell">
+            <h3>
+              <i class="fas fa-map-marked-alt block-top"></i><br />
+              Choro&shy;pleth Map
+            </h3>
+            <p>Displays geographic variation of the data via representative color scales</p>
+          </div>
+          
+          <div class="grid-cell">
+            <h3>
+              <i class="fas fa-lock-open block-top"></i></i><br />
+              Open Access
+            </h3>
+            <p>No account needed to interact with our data</p>
+          </div>
+          
+          <div class="grid-cell">
+            <h3>
+              <i class="fas fa-key block-top"></i></i><br />
+              Login Available
+            </h3>
+            <p>Keep a history of your past queries or save the ones you use most often</p>
+          </div>
+          
+          <div class="grid-cell">
+            <h3>
+              <i class="fas fa-location-arrow block-top"></i><br />
+              Location Filters
+            </h3>
+            <p>Filter the data at the US state or county level</p>
+          </div> <!-- grid-cell -->
+
+          <div class="grid-cell">
+            <h3>
+              <i class="far fa-calendar-alt block-top"></i><br />
+              Time Filters
+            </h3>
+            <p>Filter the data by a time period of your choosing</p>
+          </div> <!-- grid-cell -->
+          
+          <div class="grid-cell">
+            <h3>
+              <i class="fas fa-filter block-top"></i><br />
+              Metric Filters
+            </h3>
+            <p>Filter the data by metrics common between different incidents of gun violence</p>
+          </div> <!-- grid-cell -->
+
           <div class="grid-cell">
             <h3>
               <i class="far fa-eye block-top"></i><br />
-              Feature
+              Color&shy;blind Friendly
             </h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati ipsa necessitatibus magni!</p>
-          </div>
+            <p>Our default color schemes can be viewed easily by a person with colorblindness</p>
+          </div> <!-- grid-cell -->
+
+          <!-- Keep as last cell -->
           <div class="grid-cell">
             <h3>
-              <i class="far fa-eye block-top"></i><br />
-              Feature
+                <i class="fas fa-flask block-top"></i><br />
+              And More to Come
             </h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati ipsa necessitatibus magni!</p>
-          </div>
-          <div class="grid-cell">
-            <h3>
-              <i class="far fa-eye block-top"></i><br />
-              Feature
-            </h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati ipsa necessitatibus magni!</p>
-          </div>
-          <div class="grid-cell">
-            <h3>
-              <i class="far fa-eye block-top"></i><br />
-              Feature
-            </h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati ipsa necessitatibus magni!</p>
-          </div>
-          <div class="grid-cell">
-            <h3>
-              <i class="far fa-eye block-top"></i><br />
-              Feature
-            </h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati ipsa necessitatibus magni!</p>
-          </div>
-          <div class="grid-cell">
-            <h3>
-              <i class="far fa-eye block-top"></i><br />
-              Feature
-            </h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati ipsa necessitatibus magni!</p>
-          </div>
-          <div class="grid-cell">
-            <h3>
-              <i class="far fa-eye block-top"></i><br />
-              Feature 1
-            </h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati ipsa necessitatibus magni!</p>
-          </div>
+            <p>We're experimenting behind the scenes to bring you even more features in the near future</p>
+          </div> <!-- grid-cell -->
+
+          </section> <!-- section-wrap grid -->
         </div> <!-- grid-wrap -->
       </section> <!-- section-wrap grid -->
 
-      <!-- <section class="section-wrap spotlights" id="top-viz">
-        <section class="spotlight"></section>
-        <section class="spotlight"></section>
-        <section class="spotlight"></section>
-        <section class="spotlight"></section>
-      </section>  -->
-      <!-- section-wrap spotlights (stretch feature) -->
+      <div class="spacer"></div>
+
+      
+
     </main>
     <!-- <footer></footer> -->
   </div> <!-- container-->

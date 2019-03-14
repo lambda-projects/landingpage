@@ -1,3 +1,16 @@
+// Spacer Div
+.spacer {
+  height: 20rem;
+
+  @media @tablet {
+    height: 17.5rem;
+  }
+
+  @media @mobile {
+    height: 15rem;
+  }
+}
+
 // Content Row Styles
 .bg {
   &-1 {
@@ -44,9 +57,71 @@
   }
   .banner-wrap {
     .max-w;
+
+    &.p-left {
+      p {
+        text-align: left;
+      }
+    }
   }
   .banner {
     text-align: center;
+  }
+
+  .carousel-wrap {
+    width: 100%;
+    .max-w;
+    .center;
+    margin: 2rem 0;
+    padding: 0 2.25rem;
+    position: relative;
+
+    @media @mobile-sm {
+      margin: 1.5rem 0;
+      padding: 0 1.75rem;
+    }
+
+    img {
+      display: none;
+      z-index: 0;
+
+      &.img-active {
+        display: block;
+      }
+    }
+    
+    .car-btn {
+      z-index: 1;
+      background: black;
+      color: @gvhm-lightgrey;
+      border-radius: 50%;
+      padding: 0.2rem;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+
+      &.prev {
+        left: 0;
+      }
+      &.next {
+        right: 0;
+      }
+
+      &:hover {
+        color: @gvhm-lightbluish;
+      }
+      
+      i {
+        margin: 0;
+        padding: 0;
+        font-size: 4rem;
+
+        @media @mobile-sm {
+          font-size: 3rem;
+        }
+      }
+    }
   }
 
   // Spotlights
@@ -84,8 +159,10 @@
     }
     
     .spot-content {
+      height: 100%;
       .max-w;
       padding: 2rem 0;
+      align-self: center;
     }
   }
 
@@ -94,13 +171,29 @@
     text-align: center;
   }
   .grid-wrap {
-    // Using both row-reverse and wrap-reverse so that a top feature can be easily highlighted by itself, but requires grid-cells to be ordered backwards in HTML
-    .flex(row-reverse, space-between, center);
-    flex-wrap: wrap-reverse;
+    .flex(row, space-between, center);
+    flex-wrap: wrap;
+
+    @media @mobile {
+      .center(column);
+      flex-wrap: nowrap;
+    }
   }
   .grid-cell {
     margin: 2rem;
     padding: 2rem;
-    flex: 1 1 40rem;
+    flex: 1 1 30rem;
+    .center(column);
+    height: 30rem;
+    // width: 0;
+
+    @media @tablet {
+      height: 25rem;
+    }
+
+    @media @mobile {
+      height: auto;
+      flex: 1 1 25rem;
+    }
   }
 }

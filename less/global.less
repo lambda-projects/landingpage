@@ -22,6 +22,7 @@ html {
 body {
   font-size: 1.6rem;
   font-family: @font-body;
+  color: @body-color;
   width: 100%;
   height: 100%;
   min-height: 100vh;
@@ -30,6 +31,10 @@ body {
   background-size: cover;
   background-position: 50%;
   background-attachment: fixed;
+
+  @media mobile-sm {
+    font-size: 1.2rem;
+  }
 }
 
 img {
@@ -40,7 +45,10 @@ img {
 // H1-H6 Styling
 h1, h2, h3, h4, h5, h6 {
   font-family: @font-header;
-  margin-bottom: 2.4rem;
+  margin: 0.5em 0 0.25em;
+}
+p+h1, p+h2, p+h3, p+h4, p+h5, p+h6 {
+  margin-top: 1.5em;
 }
 
 h1 {
@@ -54,6 +62,10 @@ h1 {
   @media @mobile {
     font-size: 4.8rem;
   }
+
+  @media @mobile-sm {
+    font-size: 3rem;
+  }
 }
 
 h2 {
@@ -66,17 +78,25 @@ h2 {
   @media @mobile {
     font-size: 4.8rem;
   }
+
+  @media @mobile-sm {
+    font-size: 3rem;
+  }
 }
 
 h3 {
   font-size: 4.8rem;
 
   @media @tablet {
-    font-size: 4.2;
+    font-size: 4.2rem;
   }
 
   @media @mobile {
     font-size: 3.6rem;
+  }
+
+  @media @mobile-sm {
+    font-size: 2.6rem;
   }
 }
 
@@ -90,6 +110,10 @@ h4 {
   @media @mobile {
     font-size: 2.4;
   }
+
+  @media @mobile-sm {
+    font-size: 2rem;
+  }
 }
 
 h5 {
@@ -102,6 +126,10 @@ h5 {
   @media @mobile {
     font-size: 1.6rem;
   }
+
+  @media @mobile-sm {
+    font-size: 1.4rem;
+  }
 }
 
 // Paragraph Styling
@@ -109,25 +137,62 @@ p {
   margin-bottom: 2.4rem;
   line-height: 1.25;
 
-  &:p1, &.tagline, &.dev-role {
+  &.p1, &.tagline {
     font-size: 2rem;
+
+    @media @mobile {
+      font-size: 1.6rem;
+    }
+
+    @media @mobile-sm {
+      font-size: 1.4rem;
+    }
   }
 }
 
 // Icon Styling
 i {
-  padding-right: 0.5em;
+  margin-right: 0.5em;
+  width: 1em;
 
   &.block-top, &.block-bot {
-    padding-right: 0;
+    margin-right: 0;
   }
 
   &.block-top {
-    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
   }
 
   &.block-bot {
-    padding-top: 0.5em;
+    margin-top: 0.5em;
+  }
+}
+
+// Specific Icon(s)
+.bg-1 {
+  i {
+    border-radius: 50%;
+    
+    &.fa-kaggle {
+      font-size: 0.67em;
+      width: 1.5em;
+      color: @content1-bg;
+      background: @content1-color;
+      padding: 0.2em;
+    }
+  }
+}
+.bg-2 {
+  i {
+    border-radius: 50%;
+    
+    &.fa-kaggle {
+      font-size: 0.67em;
+      width: 1.5em;
+      color: @content2-bg;
+      background: @content2-color;
+      padding: 0.25em;
+    }
   }
 }
 
@@ -140,15 +205,13 @@ span.break {
 button {
   cursor: pointer;
   padding: 1rem 2rem;
+  margin: 1rem;
   border: 0;
   border-radius: 0.5rem;
+  outline: none;
 
   &.cta {
     background: @cta-bg;
     color: white;
-
-    &:hover {
-      background:@cta-hov;
-    }
   }
 }
