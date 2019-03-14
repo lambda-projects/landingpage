@@ -223,7 +223,7 @@ h3 {
 }
 @media (max-width: 800px) {
   h3 {
-    font-size: 4.2;
+    font-size: 4.2rem;
   }
 }
 @media (max-width: 500px) {
@@ -310,17 +310,51 @@ i.block-bot {
   border-radius: 50%;
 }
 .bg-1 i.fa-kaggle {
+  font-size: 3.2rem;
+  width: 1.5em;
   color: #4F5A62;
   background: #D3D7C8;
-  padding: 0.25em;
+  padding: 0.2em;
+}
+@media (max-width: 800px) {
+  .bg-1 i.fa-kaggle {
+    font-size: 2.8rem;
+  }
+}
+@media (max-width: 500px) {
+  .bg-1 i.fa-kaggle {
+    font-size: 2.4rem;
+  }
+}
+@media (max-width: 350px) {
+  .bg-1 i.fa-kaggle {
+    font-size: 1.7rem;
+  }
 }
 .bg-2 i {
   border-radius: 50%;
 }
 .bg-2 i.fa-kaggle {
+  font-size: 3.2rem;
+  width: 1.5em;
   color: #666666;
   background: #D3D7C8;
   padding: 0.25em;
+}
+@media (max-width: 800px) {
+  .bg-2 i.fa-kaggle {
+    font-size: 2.8rem;
+  }
+}
+@media (max-width: 500px) {
+  .bg-2 i.fa-kaggle {
+    font-size: 2.4rem;
+  }
+}
+@media (max-width: 350px) {
+  .bg-2 i.fa-kaggle {
+    font-size: 1.7rem;
+  }
 }
 span.break {
   display: inline-block;
