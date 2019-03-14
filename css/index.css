@@ -590,7 +590,7 @@ button.cta {
   align-items: center;
   flex-wrap: wrap;
 }
-@media (max-width: 800px) {
+@media (max-width: 500px) {
   .section-wrap .grid-wrap {
     display: flex;
     justify-content: center;
@@ -600,19 +600,24 @@ button.cta {
   }
 }
 .section-wrap .grid-cell {
-  height: 30rem;
   margin: 2rem;
   padding: 2rem;
-  flex: 1 1 35rem;
+  flex: 1 1 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 30rem;
 }
 @media (max-width: 800px) {
   .section-wrap .grid-cell {
-    height: auto;
-    width: 100%;
+    height: 25rem;
   }
 }
 @media (max-width: 500px) {
   .section-wrap .grid-cell {
+    height: auto;
     flex: 1 1 25rem;
+    width: 100%;
   }
 }

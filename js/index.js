@@ -65,7 +65,9 @@ class Button {
         this.button = button;
         this.button.addEventListener('mouseover', e => e.target.style.background = '#AD2727');
         this.button.addEventListener('mouseout', e => e.target.style.background = '#A51212');
+        this.icons = this.button.querySelectorAll('i');
+        this.icons.forEach(icon => icon.addEventListener('mouseover', e => e.target.parentNode.style.background = '#AD2727'));
     }
 }
-let buttons = document.querySelectorAll('button');
-buttons.forEach(btn => new Button(btn));
+let buttons = Array.from(document.querySelectorAll('button'));
+buttons.map(btn => new Button(btn));
