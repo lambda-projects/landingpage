@@ -149,18 +149,43 @@ p {
 
 // Icon Styling
 i {
-  padding-right: 0.5em;
+  margin-right: 0.5em;
+  width: 1em;
 
   &.block-top, &.block-bot {
-    padding-right: 0;
+    margin-right: 0;
   }
 
   &.block-top {
-    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
   }
 
   &.block-bot {
-    padding-top: 0.5em;
+    margin-top: 0.5em;
+  }
+}
+
+// Specific Icon(s)
+.bg-1 {
+  i {
+    border-radius: 50%;
+
+    &.fa-kaggle {
+      color: @content1-bg;
+      background: @content1-color;
+      padding: 0.25em;
+    }
+  }
+}
+.bg-2 {
+  i {
+    border-radius: 50%;
+    
+    &.fa-kaggle {
+      color: @content2-bg;
+      background: @content2-color;
+      padding: 0.25em;
+    }
   }
 }
 
