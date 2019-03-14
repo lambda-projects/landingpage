@@ -1,3 +1,4 @@
+// Carousels
 class Carousel {
   constructor(carousel) {
       this.carousel = carousel;
@@ -29,16 +30,30 @@ class Carousel {
 let carousels = Array.from(document.querySelectorAll('.carousel-wrap'));
 carousels.map(crsl => new Carousel(crsl));
 
+
+
+
+// Jump Links
 class JumpNav {
     constructor(jumpNav) {
         this.jumpNav = jumpNav;
         this.jumpLinks = jumpNav.querySelectorAll('.jump');
-        this.jumpLinks.forEach(link => link.addEventListener('click', this.jump.bind(this)));
-        console.log(this.jumpLinks);
+        this.jumpLinks.forEach(link => new JumpLink(link));
     }
-    jump() {}
+}
+class JumpLink {
+    constructor(jumpLink) {
+        this.jumpLink = jumpLink;
+        this.jumpLink.addEventListener('click', this.jump.bind(this));
+    }
+    jump() {
+        console.log('clicked');
+        element.scrollIntoView();
+    }
 }
 
 let jumpLinks = document.querySelector('.nav-page');
 jumpLinks = new JumpNav(jumpLinks);
-// console.log(jumpLinks);
+
+// var elmnt = document.getElementById("content");
+// elmnt.scrollIntoView();
