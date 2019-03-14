@@ -44,11 +44,21 @@ Style guide image produced by [Andrew Benedict](https://github.com/atbenedict), 
 
 ## Page Structure & Organization
 
-Each page has a fixed navbar, a "splash page"-style header, and any of three types of content sections with optional spacer divs.
+Each page has a fixed navbar, a "splash page"-style section that encapsulates the page's header, and any of three types of content sections with optional spacer divs.
 
 ### Navbar
 
-### Page Header
+The navbar is a simple `nav` element set outside the `main` element of the page and fixed to the top of the site, using flexbox to space the site navigation links evenly across the top of the page. At particularly small screen widths (below 350px) the navbar goes static in order to free-up room on the screen while scrolling.
+
+### Splash Section
+
+`div.splash`
+  `header.header-section`
+    `div.header-content`
+      `h1`
+      `p.tagline` (optional)
+      `div.cta-wrap` (optional)
+        `button.cta` (optional)
 
 ### Banner Sections
 
