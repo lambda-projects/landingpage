@@ -28,3 +28,12 @@ class Carousel {
 
 let carousels = Array.from(document.querySelectorAll('.carousel-wrap'));
 carousels.map(crsl => new Carousel(crsl));
+
+class JumpNav {
+    constructor(jumpNav) {
+        this.jumpNav = jumpNav;
+    }
+}
+
+let jumpLinks = document.querySelector('.nav-page');
+console.log(jumpLinks);
