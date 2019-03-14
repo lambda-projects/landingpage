@@ -48,6 +48,11 @@ Each page has a fixed navbar, a "splash page"-style section that encapsulates th
 
 ### Navbar
 
+* `body` (fixed background image w/ `background-size: cover`)
+    * `nav.nav-site`
+        * `a.nav-link`
+            * link content
+
 The navbar is a simple `nav` element set outside the `main` element of the page and fixed to the top of the site, using flexbox to space the site navigation links evenly across the top of the page. At particularly small screen widths (below 350px) the navbar goes static in order to free-up room on the screen while scrolling.
 
 ### Splash Section
@@ -61,6 +66,7 @@ The navbar is a simple `nav` element set outside the `main` element of the page 
           * `button.cta.p1` (optional, multiple)
     * `nav.nav-page`
         * `div.jump[data-sec={section}]` (multiple)
+            * jump link content
 
 ### Banner Sections
 
