@@ -22,7 +22,7 @@ Inspired by the [Spectral theme](https://html5up.net/spectral) on HTML5UP.
 
 Style guide image produced by [Andrew Benedict](https://github.com/atbenedict), our Back End Architect.
 
-[Visualization of our color scheme](https://coolors.co/a51212-666666-4f5a62-9fa9b2-d3d7c8) on coolors.com, inspired by [this palette](https://www.colourlovers.com/palette/453310/Sound_Of_A_Gun).
+[Visualization of our color scheme](https://coolors.co/a51212-4f5a62-666666-9fa9b2-d3d7c8) on coolors.com, inspired by [this palette](https://www.colourlovers.com/palette/453310/Sound_Of_A_Gun).
 
 ### Background Image
 
@@ -38,8 +38,8 @@ Color Variables   | Hex Values |
 ---               |---         |
 @gvhm-red         | #A51212    |
 @gvhm-lightred    | #AD2727    |
-@gvhm-darkgrey    | #666666    |
 @gvhm-darkbluish  | #4F5A62    |
+@gvhm-darkgrey    | #666666    |
 @gvhm-lightbluish | #9FA9B2    |
 @gvhm-lightgrey   | #D3D7C8    |
 @gvhm-deepblue    | #0A3C60    |
