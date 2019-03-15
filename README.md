@@ -86,6 +86,47 @@ Variable   | Value                | Purpose
 @mobile    | ~"(max-width: 500px) | set breakpoint for mobile-sized screens |
 @mobile-sm | ~"(max-width: 350px) | set breakpoint for smaller mobile screens |
 
+### LESS Mixins
+
+LESS: [mixins.less](/less/mixins.less)
+
+#### Common Max Width
+
+```
+.max-w() {
+  max-width: @max-w;
+  margin: 0 2rem;
+}
+```
+
+This mixin takes the `@max-w` variable and makes it standardizes it across many different sections of the website along with a standard left and right margin for those sections to make room between content and the edge of the window.
+
+#### Generic Flex
+
+```
+.flex(@dir: row, @jc: flex-start, @ai: stretch) {
+  display: flex;
+  flex-direction: @dir;
+  justify-content: @jc;
+  align-items: @ai;
+}
+```
+
+This mixin serves as a standard shorthand for the most commonly used flexbox properties, each set to have the same default values as the standard for those properties.
+
+#### Flex Centering
+
+```
+.center(@dir: row) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: @dir;
+}
+```
+
+This mixin merely sets an element to center child elements vertically and horizontally within the specific parent element through flexbox with the ability to set the flex-direction to column, though it defaults to row.
+
 ### Navbar
 
 LESS: [navbar.less](/less/navbar.less)
