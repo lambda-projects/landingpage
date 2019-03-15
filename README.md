@@ -42,34 +42,43 @@ Color Variables   | Hex Values |
 
 LESS: [variables.less](/less/variables.less)
 
-Color Variables   | Hex Values         |
----               |---                 |
-@body-color       | @gvhm-lightgrey    |
-@cta-bg           | @gvhm-red          |
-@cta-hov          | @gvhm-lightred     |
-@nav-bg           | black              |
-@nav-color        | @gvhm-lightgrey    |
-@header-bg        | rgba(0, 0, 0, .35) |
-@header-color     | @gvhm-lightgrey    |
-@header-a         | @gvhm-lightbluish  |
-@h1-color         | @gvhm-lightgrey    |
-@jump-color       | @gvhm-lightgrey    |
-@content1-bg      | @gvhm-darkbluish   |
-@content2-bg      | @gvhm-darkgrey     |
-@content1-color   | @gvhm-lightgrey    |
-@content2-color   | @gvhm-lightgrey    |
-@content1-a       | @gvhm-lightbluish  |
-@content2-a       | @gvhm-lightbluish  |
+Assignment Variables   | Color Variables       |
+---                    |---                    |
+@body-color            | @gvhm-lightgrey       |
+@cta-bg                | @gvhm-red             |
+@cta-hov               | @gvhm-lightred        |
+@nav-bg                | black                 |
+@nav-color             | @gvhm-lightgrey       |
+@header-bg             | rgba(0, 0, 0, .35)    |
+@header-color          | @gvhm-lightgrey       |
+@header-a              | @gvhm-lightbluish     |
+@h1-color              | @gvhm-lightgrey       |
+@jump-color            | @gvhm-lightgrey       |
+@content1-bg           | @gvhm-darkbluish      |
+@content2-bg           | @gvhm-darkgrey        |
+@content1-color        | @gvhm-lightgrey       |
+@content2-color        | @gvhm-lightgrey       |
+@content1-a            | @gvhm-lightbluish     |
+@content2-a            | @gvhm-lightbluish     |
 
-### Fonts
+### Font Variables
 
 LESS: [variables.less](/less/variables.less)
 
-Context          | Google Font          | Fallback
----              |---                   |---
-H1-H6            | [Playfair Display SC](https://fonts.google.com/specimen/Playfair+Display+SC) | serif
-Body text        | [Open Sans](https://fonts.google.com/specimen/Open+Sans) | sans-serif
-Icons            | [Font Awesome (Free)](https://fontawesome.com/) | `none`
+Context          | Google Font          | Variable | Fallback
+---              |---                   |--- |---
+H1-H6            | [Playfair Display SC](https://fonts.google.com/specimen/Playfair+Display+SC) | `@Playfair` | serif
+Body text        | [Open Sans](https://fonts.google.com/specimen/Open+Sans) | @`@OpenSans` | sans-serif
+Icons            | [Font Awesome (Free)](https://fontawesome.com/) | `none` | `none`
+
+### Font Assignments
+
+LESS: [variables.less](/less/variables.less)
+
+Assignment Variables | Font Variables |
+---                  |---             |
+@font-header         | @Playfair      |
+@font-body           | @OpenSans      |
 
 ## Page Structure & Organization
 
@@ -86,7 +95,7 @@ Variable   | Value                | Purpose
 @mobile    | ~"(max-width: 500px) | set breakpoint for mobile-sized screens |
 @mobile-sm | ~"(max-width: 350px) | set breakpoint for smaller mobile screens |
 
-### LESS Mixins
+### Mixins
 
 LESS: [mixins.less](/less/mixins.less)
 
