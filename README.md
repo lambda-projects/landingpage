@@ -71,6 +71,10 @@ H1-H6            | [Playfair Display SC](https://fonts.google.com/specimen/Playf
 Body text        | [Open Sans](https://fonts.google.com/specimen/Open+Sans) | sans-serif
 Icons            | [Font Awesome (Free)](https://fontawesome.com/) | `none`
 
+## Page Structure & Organization
+
+Each page has a fixed navbar and a "splash page"-style section that encapsulates the page's header and jump links. The main content can then use spotlight sections or, more flexibly, use banner sections that can themselves encapsulate content grids, carousels, or any other typical content very easily.
+
 ### Media Queries
 
 LESS: [variables.less](/less/variables.less)
@@ -81,10 +85,6 @@ Variable   | Value                | Purpose
 @tablet    | ~"(max-width: 800px) | set breakpoint for tablet-sized screens |
 @mobile    | ~"(max-width: 500px) | set breakpoint for mobile-sized screens |
 @mobile-sm | ~"(max-width: 350px) | set breakpoint for smaller mobile screens |
-
-## Page Structure & Organization
-
-Each page has a fixed navbar and a "splash page"-style section that encapsulates the page's header and jump links. The main content can then use spotlight sections or, more flexibly, use banner sections that can themselves encapsulate content grids, carousels, or any other typical content very easily.
 
 ### Navbar
 
