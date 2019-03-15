@@ -68,7 +68,7 @@ LESS: [variables.less](/less/variables.less)
 Context          | Google Font          | Variable | Fallback
 ---              |---                   |--- |---
 H1-H6            | [Playfair Display SC](https://fonts.google.com/specimen/Playfair+Display+SC) | `@Playfair` | serif
-Body text        | [Open Sans](https://fonts.google.com/specimen/Open+Sans) | @`@OpenSans` | sans-serif
+Body text        | [Open Sans](https://fonts.google.com/specimen/Open+Sans) | `@OpenSans` | sans-serif
 Icons            | [Font Awesome (Free)](https://fontawesome.com/) | `none` | `none`
 
 ### Font Assignments
