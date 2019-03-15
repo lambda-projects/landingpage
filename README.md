@@ -128,10 +128,10 @@ LESS: [content-sections.less](/less/content-sections.less)
 * `section.section-wrap.banners[data-sec={section}]`
     * `div.banner-wrap`
         * header content
-      * `div.carousel-wrap`
-          * `div.car-btn.prev`
-          * `img` (multiple)
-          * `div.car-btn.next`
+    * `div.carousel-wrap`
+        * `div.car-btn.prev`
+        * `img` (multiple)
+        * `div.car-btn.next`
 
 The carousel wrapper sets the common max-width, uses flexbox to center everything vertically and horizontally, and sets margin and padding to allow for proper alignment of the carousel's previous and next buttons. The buttons are simply set to straddle their respective edge of the carousel images.
 
@@ -145,6 +145,8 @@ LESS: [content-sections.less](/less/content-sections.less)
     * `div.grid-wrap`
         * `div.grid-cell` (multiple)
             * cell content
+
+The grid wrapper does not set the common max-width, instead opting to serve up the grid across the entire viewport and wrapping them using flexbox's `flex-wrap: wrap`. Each cell is spaced according to `justify-content: space-between` and the margin specified on the individual cells.
 
 ### Spotlight Sections
 
@@ -168,3 +170,5 @@ Initially, the image wrapper is set to a width of `40vw`, but switches to `100%`
 LESS: [content-sections.less](/less/content-sections.less)
 
 * `div.spacer`
+
+Spacer divs exist only to provide a peek back at the page's background image between content sections. These are completely optional, but highly encouraged.
