@@ -20,6 +20,10 @@ Style guide image produced by [Andrew Benedict](https://github.com/atbenedict), 
 
 ![Style Guide v01](/design-files/StyleGuide-v01.png)
 
+[Visualization of our color scheme](https://coolors.co/a51212-666666-4f5a62-9fa9b2-d3d7c8) on coolors.com.
+
+Color scheme inspired by [this palette](https://www.colourlovers.com/palette/453310/Sound_Of_A_Gun).
+
 ### Color Variables
 
 LESS: [variables.less](/less/variables.less)
@@ -33,10 +37,6 @@ Color Variables   | Hex Values |
 @gvhm-lightbluish | #9FA9B2    |
 @gvhm-lightgrey   | #D3D7C8    |
 @gvhm-deepblue    | #0A3C60    |
-
-[Visualization of our color scheme](https://coolors.co/a51212-666666-4f5a62-9fa9b2-d3d7c8) on coolors.com.
-
-Color scheme inspired by [this palette](https://www.colourlovers.com/palette/453310/Sound_Of_A_Gun).
 
 ### Color Assignments
 
