@@ -427,6 +427,11 @@ button.cta {
     height: 15rem;
   }
 }
+@media (max-width: 500px) {
+  .spacer {
+    height: 12.5rem;
+  }
+}
 .bg-1 {
   width: 100%;
   display: flex;
@@ -616,6 +621,7 @@ button.cta {
 }
 @media (max-width: 500px) {
   .section-wrap .grid-cell {
+    width: 100%;
     height: auto;
     flex: 1 1 25rem;
   }

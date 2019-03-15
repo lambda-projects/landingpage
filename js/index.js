@@ -67,6 +67,7 @@ class Button {
         this.button.addEventListener('mouseout', e => e.target.style.background = '#A51212');
         this.icons = this.button.querySelectorAll('i');
         this.icons.forEach(icon => icon.addEventListener('mouseover', e => e.target.parentNode.style.background = '#AD2727'));
+        this.icons.forEach(icon => icon.addEventListener('mouseout', e => e.target.parentNode.style.background = '#A51212'));
     }
 }
 let buttons = Array.from(document.querySelectorAll('button'));
