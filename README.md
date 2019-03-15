@@ -44,7 +44,7 @@ Style guide image produced by [Andrew Benedict](https://github.com/atbenedict), 
 
 ## Page Structure & Organization
 
-Each page has a fixed navbar and a "splash page"-style section that encapsulates the page's header and jump links. The main content can then use spotlight sections or, more flexibly, use banner sections that can themselves encapsulate content grids, carousels, or any other typical content.
+Each page has a fixed navbar and a "splash page"-style section that encapsulates the page's header and jump links. The main content can then use spotlight sections or, more flexibly, use banner sections that can themselves encapsulate content grids, carousels, or any other typical content very easily.
 
 ### Navbar
 
@@ -54,7 +54,6 @@ Each page has a fixed navbar and a "splash page"-style section that encapsulates
             * link content
 
 The navbar is a simple `nav` element set outside the `main` element of the page and fixed to the top of the site, using flexbox to space the site navigation links evenly across the top of the page. At particularly small screen widths (below 350px) the navbar goes static in order to free-up room on the screen while scrolling.
-
 
 ### Splash Section
 
