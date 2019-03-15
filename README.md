@@ -44,7 +44,7 @@ Style guide image produced by [Andrew Benedict](https://github.com/atbenedict), 
 
 ## Page Structure & Organization
 
-Each page has a fixed navbar, a "splash page"-style section that encapsulates the page's header, and any of three types of content sections with optional spacer divs.
+Each page has a fixed navbar and a "splash page"-style section that encapsulates the page's header and jump links. The main content can then use spotlight sections or, more flexibly, use banner sections that can themselves encapsulate content grids, carousels, or any other typical content.
 
 ### Navbar
 
@@ -122,7 +122,7 @@ The simplest of the content sections, this `section` merely centers its text as 
 
 The carousel wrapper sets the common max-width, uses flexbox to center everything vertically and horizontally, and sets margin and padding to allow for proper alignment of the carousel's previous and next buttons. The buttons are simply set to straddle their respective edge of the carousel images.
 
-### Grid Sections
+#### Grid Sections
 
 * `section.section-wrap.grid[data-sec={section}]`
     * `div.banner-wrap` (grid header)
@@ -133,16 +133,18 @@ The carousel wrapper sets the common max-width, uses flexbox to center everythin
 
 ### Spotlight Sections
 
-* `section.section-wrap.spotlights[data-sec={section}]` (`.rev` optional)
-    * `section.spotlight.bg-2`
+* `section.section-wrap.spotlights[data-sec={section}]`
+    * `section.spotlight.bg{1/2}` (`.rev` optional)
         * `div.img-wrap`
             * `img`
         * `div.spot-content`
             * image-relevant content
 
-Spotlight sections are set to show an image flush against the left of the screen (or right of the screen with `.rev`) with relevant content next to it at desktop-size screen widths.
+Spotlight sections are set to show an image flush against the left of the screen (or right of the screen with `.rev`) with relevant content next to it at desktop-size screen widths. At smaller screen widths (800px and below), the image merely stacks on top of its paired content by means of a media query.
 
+If the `.rev` class exists on `section.spotlight`, then that section will have `flex-direction: row-reverse` applied to reverse the position of the image and its relevant content. The `bg-{1/2}` classes, which will be explained below, should be placed on that same element.
 
+Initially, the image wrapper is set to a width of `40vw`, but switches to `100%` at the same time as `section.spotlight` switches to column layout. The wrapper for the spotlight content then applies the common max-width and aligns the content in the center of its parent.
 
 ### Spacer Divs
 
