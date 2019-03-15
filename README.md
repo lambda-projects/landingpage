@@ -14,13 +14,15 @@
 * [ ]  Descriptions about the product and about the features it provides would be key.
 * [ ]  For a second page, you could do an about us section that includes images of the members of your team, and links to one another's socials/Github.
 
-## Design Details
+## Style Guide
 
-Context          | Google Font          | Fallback
----              |---                   |---
-H1-H6            | [Playfair Display SC](https://fonts.google.com/specimen/Playfair+Display+SC) | serif
-Body text        | [Open Sans](https://fonts.google.com/specimen/Open+Sans) | sans-serif
-Icons            | [Font Awesome (Free)](https://fontawesome.com/) | `none`
+Style guide image produced by [Andrew Benedict](https://github.com/atbenedict), our Back End Architect.
+
+![Style Guide v01](/design-files/StyleGuide-v01.png)
+
+### Color Variables
+
+LESS: [variables.less](/less/variables.less)
 
 Color Variables   | Hex Values |
 ---               |---         |
@@ -32,15 +34,53 @@ Color Variables   | Hex Values |
 @gvhm-lightgrey   | #D3D7C8    |
 @gvhm-deepblue    | #0A3C60    |
 
-[Visualization of color scheme](https://coolors.co/a51212-666666-4f5a62-9fa9b2-d3d7c8) on coolors.com.
+[Visualization of our color scheme](https://coolors.co/a51212-666666-4f5a62-9fa9b2-d3d7c8) on coolors.com.
 
 Color scheme inspired by [this palette](https://www.colourlovers.com/palette/453310/Sound_Of_A_Gun).
 
-## Most Recent Style Guide
+### Color Assignments
 
-Style guide image produced by [Andrew Benedict](https://github.com/atbenedict), our Back End Architect.
+LESS: [variables.less](/less/variables.less)
 
-![Style Guide v01](/design-files/StyleGuide-v01.png)
+Color Variables   | Hex Values         |
+---               |---                 |
+@body-color       | @gvhm-lightgrey    |
+@cta-bg           | @gvhm-red          |
+@cta-hov          | @gvhm-lightred     |
+@nav-bg           | black              |
+@nav-color        | @gvhm-lightgrey    |
+@header-bg        | rgba(0, 0, 0, .35) |
+@header-color     | @gvhm-lightgrey    |
+@header-a         | @gvhm-lightbluish  |
+@h1-color         | @gvhm-lightgrey    |
+@jump-color       | @gvhm-lightgrey    |
+@content1-bg      | @gvhm-darkbluish   |
+@content2-bg      | @gvhm-darkgrey     |
+@content1-color   | @gvhm-lightgrey    |
+@content2-color   | @gvhm-lightgrey    |
+@content1-a       | @gvhm-lightbluish  |
+@content2-a       | @gvhm-lightbluish  |
+
+### Fonts
+
+LESS: [variables.less](/less/variables.less)
+
+Context          | Google Font          | Fallback
+---              |---                   |---
+H1-H6            | [Playfair Display SC](https://fonts.google.com/specimen/Playfair+Display+SC) | serif
+Body text        | [Open Sans](https://fonts.google.com/specimen/Open+Sans) | sans-serif
+Icons            | [Font Awesome (Free)](https://fontawesome.com/) | `none`
+
+### Media Queries
+
+LESS: [variables.less](/less/variables.less)
+
+Variable   | Value                | Purpose
+---        |---                   |---
+@max-w     | 800px                | set common max-width (for `.max-w()` mixin)
+@tablet    | ~"(max-width: 800px) | set breakpoint for tablet-sized screens |
+@mobile    | ~"(max-width: 500px) | set breakpoint for mobile-sized screens |
+@mobile-sm | ~"(max-width: 350px) | set breakpoint for smaller mobile screens |
 
 ## Page Structure & Organization
 
