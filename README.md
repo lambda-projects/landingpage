@@ -98,7 +98,7 @@ LESS [global.less](/less/global.less)
     * `i.{font awesome classes}`
     * copy
 
-By default, icons are styled to be used inline, with a right margin to space it out from the copy that follows.
+By default, icons are styled to be used inline, with a right margin to space it out from the copy that follows. The appropriate Font Awesome classes for any individual icon can be found when searching through the collection of icons on their website. The first of these two classes specifies which of their icon collections it is coming from and the second specifies which individual icon you'll be using.
 
 ### Stacked Icons
 
