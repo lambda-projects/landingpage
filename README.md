@@ -109,7 +109,7 @@ LESS: [mixins.less](/less/mixins.less)
 
 #### Common Max Width
 
-```
+```less
 .max-w() {
   max-width: @max-w;
   margin: 0 2rem;
@@ -120,7 +120,7 @@ This mixin takes the `@max-w` variable and makes it standardizes it across many 
 
 #### Generic Flex
 
-```
+```less
 .flex(@dir: row, @jc: flex-start, @ai: stretch) {
   display: flex;
   flex-direction: @dir;
@@ -133,7 +133,7 @@ This mixin serves as a standard shorthand for the most commonly used flexbox pro
 
 #### Flex Centering
 
-```
+```less
 .center(@dir: row) {
   display: flex;
   justify-content: center;
@@ -231,7 +231,7 @@ LESS: [content-sections.less](/less/content-sections.less)
         * `img` (multiple)
         * `div.car-btn.next`
 
-The carousel wrapper sets the common max-width, uses flexbox to center everything vertically and horizontally, and sets margin and padding to allow for proper alignment of the carousel's previous and next buttons. The buttons are simply set to straddle their respective edge of the carousel images.
+The carousel wrapper sets the common max-width, uses flexbox to center everything vertically and horizontally, and sets margin and padding to allow for proper alignment of the carousel's previous and next buttons. The buttons are simply set to straddle their respective edge of the carousel images. By default, the images are set to `display: none`, but through JavaScript one image at a time is passed the `.img-active` class that sets them as `display: block`.
 
 #### Grid Sections
 
@@ -270,3 +270,91 @@ LESS: [content-sections.less](/less/content-sections.less)
 * `div.spacer`
 
 Spacer divs exist only to provide a peek back at the page's background image between content sections. These are completely optional, but highly encouraged.
+
+## JavaScript Functionality
+
+JS: [index.js]
+
+### Jump Links
+
+```javascript
+class JumpNav {
+    constructor(jumpNav) {
+        this.jumpNav = jumpNav;
+        this.jumpLinks = jumpNav.querySelectorAll('.jump');
+        this.jumpLinks.forEach(link => new JumpLink(link));
+    }
+}
+class JumpLink {
+    constructor(jumpLink) {
+        this.jumpLink = jumpLink;
+        this.jumpLink.addEventListener('click', this.jump.bind(this));
+        this.data = this.jumpLink.dataset.sec;
+        this.section = document.querySelector(`section[data-sec='${this.data}'`);
+    }
+    jump() {
+        this.section.scrollIntoView({behavior: "smooth", block: "start"});
+    }
+}
+
+let jumpLinks = document.querySelector('.nav-page');
+jumpLinks = new JumpNav(jumpLinks);
+```
+
+Jump links are automatically grabbed on page load and attached to the section with the matching `data-sec` attribute. Event listeners are added to each link
+
+### Carousel
+
+```javascript
+class Carousel {
+  constructor(carousel) {
+      this.carousel = carousel;
+      this.btnPrev = this.carousel.querySelector('.prev');
+      this.btnPrev.addEventListener('click', this.prev.bind(this));
+      this.btnNext = this.carousel.querySelector('.next');
+      this.btnNext.addEventListener('click', this.next.bind(this));
+      this.images = this.carousel.querySelectorAll('img');
+      this.index = 0;
+      this.images[this.index].classList.add('img-active');
+  }
+
+  prev() {
+      this.images[this.index].classList.remove('img-active');
+      this.index - 1 < 0 ?
+          this.index = this.images.length -1 :
+          this.index--;
+      this.images[this.index].classList.add('img-active');
+  }
+  next() {
+      this.images[this.index].classList.remove('img-active');
+      this.index + 1 >= this.images.length ?
+          this.index = 0 :
+          this.index++;
+      this.images[this.index].classList.add('img-active');
+  }
+}
+
+let carousels = Array.from(document.querySelectorAll('.carousel-wrap'));
+carousels.map(crsl => new Carousel(crsl));
+```
+
+All carousels on the page are automatically grabbed upon page load. Event listeners are added to the previous and next buttons, which change the index stored on the Carousel object, removing the `img-active` class from the previous image and adding it to the next.
+
+### Button Hover Styles
+
+```javascript
+class Button {
+    constructor(button) {
+        this.button = button;
+        this.button.addEventListener('mouseover', e => e.target.style.background = '#AD2727');
+        this.button.addEventListener('mouseout', e => e.target.style.background = '#A51212');
+        this.icons = this.button.querySelectorAll('i');
+        this.icons.forEach(icon => icon.addEventListener('mouseover', e => e.target.parentNode.style.background = '#AD2727'));
+        this.icons.forEach(icon => icon.addEventListener('mouseout', e => e.target.parentNode.style.background = '#A51212'));
+    }
+}
+let buttons = Array.from(document.querySelectorAll('button'));
+buttons.map(btn => new Button(btn));
+```
+
+All buttons are immediately grabbed on page load and assigned event listeners for `mouseover` and `mouseout` to change their background color accordingly. Since all buttons currently have an icon from Font Awesome within them, all interior icons are grabbed as well, with event listeners attached to them that also change their parent container's background color, preventing the hover style from no longer displaying when hovering over the icon.
