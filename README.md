@@ -88,6 +88,26 @@ Assignment Variables | Font Variables |
 `@font-header`       | `@Playfair`    |
 `@font-body`         | `@OpenSans`    |
 
+### Font Awesome Icons
+
+LESS [global.less](/less/global.less)
+
+#### Inline Icons
+
+* `button` (or any other parent element)
+    * `i.{font awesome classes}`
+    * copy
+
+By default, icons are styled to be used inline, with a right margin to space it out from the copy that follows.
+
+### Stacked Icons
+
+* `div` or `h2` (or any other parent element)
+    * `i.{font awesome classes}.{block-top/block-bot}`
+    * copy or other elements
+
+For icons that are stacked above or below other elements, special classes exist to give them proper spacing from that other content. `block-top` gives the icon a bottom margin and `block-bot` a top margin.
+
 ## Page Structure & Organization
 
 Each page has a fixed navbar and a "splash page"-style section that encapsulates the page's header and jump links. The main content can then use spotlight sections or, more flexibly, use banner sections that can themselves encapsulate content grids, carousels, or any other typical content very easily.
