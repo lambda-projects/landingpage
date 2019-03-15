@@ -48,6 +48,8 @@ Each page has a fixed navbar and a "splash page"-style section that encapsulates
 
 ### Navbar
 
+LESS: [navbar.less](/less/navbar.less)
+
 * `body`
     * `nav.nav-site` (first element inside `body`)
         * `a.nav-link`
@@ -56,6 +58,8 @@ Each page has a fixed navbar and a "splash page"-style section that encapsulates
 The navbar is a simple `nav` element set outside the `main` element of the page and fixed to the top of the site, using flexbox to space the site navigation links evenly across the top of the page. At particularly small screen widths (below 350px) the navbar goes static in order to free-up room on the screen while scrolling.
 
 ### Splash Section
+
+LESS: [splash.less](/less/splash.less)
 
 * `main`
     * `div.splash` (first element inside `main`)
@@ -73,6 +77,8 @@ In order to fully display the background image fixed to the `body` element, this
 
 #### Page Header
 
+LESS: [splash.less](/less/splash.less)
+
 * `header.header-section`
     * `div.header-content` (optional wrapper)
         * `h1`
@@ -86,6 +92,8 @@ If needed, an optional wrapper can be used that would be useful if the header co
 
 #### Jump Links
 
+LESS: [splash.less](/less/splash.less)
+
 * `nav.nav-page`
     * `div.jump[data-sec={section}]` (multiple)
         * jump link content
@@ -97,11 +105,15 @@ These jump-link `div`s are each set with a `data-sec` attribute matching the sam
 
 ### Generic Section Wrapper
 
+LESS: [content-sections.less](/less/content-sections.less)
+
 * `section.section-wrap[data-sec={section}]`
 
 These `sections` with class `section-wrap` merely use flexbox to layout their direct children in a column, centered both vertically and horizontally. They wrap every major content section and take a `data-sec` attribute that's matched with the same attribute on one of the jump-links at the bottom of the splash section.
 
 ### Banner Sections
+
+LESS: [content-sections.less](/less/content-sections.less)
 
 * `section.section-wrap.banners[data-sec={section}]`
     * `div.banner-wrap`
@@ -110,6 +122,8 @@ These `sections` with class `section-wrap` merely use flexbox to layout their di
 The simplest of the content sections, this `section` merely centers its text as a default before its child element `.banner-wrap` sets a max-width for whatever content you wish to display within it, such as a carousel.
 
 #### Carousel
+
+LESS: [content-sections.less](/less/content-sections.less)
 
 * `section.section-wrap.banners[data-sec={section}]`
     * `div.banner-wrap`
@@ -123,6 +137,8 @@ The carousel wrapper sets the common max-width, uses flexbox to center everythin
 
 #### Grid Sections
 
+LESS: [content-sections.less](/less/content-sections.less)
+
 * `section.section-wrap.grid[data-sec={section}]`
     * `div.banner-wrap` (grid header)
         * header content
@@ -131,6 +147,8 @@ The carousel wrapper sets the common max-width, uses flexbox to center everythin
             * cell content
 
 ### Spotlight Sections
+
+LESS: [content-sections.less](/less/content-sections.less)
 
 * `section.section-wrap.spotlights[data-sec={section}]`
     * `section.spotlight.bg{1/2}` (`.rev` optional)
@@ -146,5 +164,7 @@ If the `.rev` class exists on `section.spotlight`, then that section will have `
 Initially, the image wrapper is set to a width of `40vw`, but switches to `100%` at the same time as `section.spotlight` switches to column layout. The wrapper for the spotlight content then applies the common max-width and aligns the content in the center of its parent.
 
 ### Spacer Divs
+
+LESS: [content-sections.less](/less/content-sections.less)
 
 * `div.spacer`
